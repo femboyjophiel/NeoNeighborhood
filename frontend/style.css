@@ -1,0 +1,33 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+}
+
+#land {
+    display: grid;
+    grid-template-columns: repeat(16, 2fr);
+    grid-template-rows: repeat(16, 2fr);
+    width: 200%;
+    height: 200%;
+    margin: auto;
+    cursor: move;
+    -webkit-user-drag: element;
+
+}
+
+#land > div {
+    border: 1px solid red;
+    box-sizing: border-box;
+    aspect-ratio: 1/1;
+}
