@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
 public class MapServices {
-    private static final String MAP_FILE = "src/java/storage/world/map.json";
+    private static final String MAP_FILE = "backend/src/main/java/org/jophiel/storage/world/map.json";
 
     public static String getMapData() {
         System.out.println("Looking for map file at: " + java.nio.file.Paths.get(MAP_FILE).toAbsolutePath());
@@ -24,69 +24,15 @@ public class MapServices {
         String data = getMapData();
         return data != null ? new org.json.JSONObject(data) : null;
     }
+    /* This will get extra inforation about a plot
+    public static org.json.JSONArray getPlot(int x, int y) {
 
-    public static org.json.JSONArray getTile(int x, int y) {
-        org.json.JSONObject mapJson = getMapJson();
-        if (mapJson == null) return null;
+    } */
+    /* This will edit a tile, ie. letting a user claim it as a plot or edit their pre-existing plot. 
+    public static boolean editPlot(int x, int y, String newType, JSONObject properties) {
+         
+    } */
 
-        JSONArray tiles = mapJson.optJSONArray("tiles");
-        if (tiles == null) return null;
-
-        for (int i = 0; i < tiles.length(); i++) {
-            JSONObject tile = tiles.getJSONObject(i);
-            JSONArray xCoords = tile.optJSONArray("x");
-            JSONArray yCoords = tile.optJSONArray("y");
-
-            if (xCoords != null && yCoords != null) {
-                for (int j = 0; j < xCoords.length(); j++) {
-                    if (xCoords.getInt(j) == x && yCoords.getInt(j) == y) {
-                        return new org.json.JSONArray().put(tile);
-                    }
-                }
-            }
-        }
-        return null;
-    }
-
-    public static boolean editTile(int x, int y, String newType, JSONObject properties) {
-        try {
-            JSONObject mapJson = getMapJson();
-            if (mapJson == null) return false;
-
-            JSONArray tiles = mapJson.optJSONArray("tiles");
-            if (tiles == null) return false;
-
-            for (int i = 0; i < tiles.length(); i++) {
-                JSONObject tile = tiles.getJSONObject(i);
-                JSONArray xCoords = tile.optJSONArray("x");
-                JSONArray yCoords = tile.optJSONArray("y");
-
-                if (xCoords != null && yCoords != null) {
-                    for (int j = 0; j < xCoords.length(); j++) {
-                        if (xCoords.getInt(j) == x && yCoords.getInt(j) == y) {
-                            // Found the tile, update it
-                            tile.put("type", newType);
-                            if (properties != null) {
-                                properties.keys().forEachRemaining(key -> 
-                                    tile.put(key, properties.get(key))
-                                );
-                            }
-                            saveMap(mapJson);
-                            return true;
-                        }
-                    }
-                }
-            }
-            return false;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
-    }
-
-    public static boolean editTile(int x, int y, String newType) {
-        return editTile(x, y, newType, null);
-    }
 
     private static void saveMap(JSONObject mapJson) throws java.io.IOException {
         Files.write(
@@ -96,4 +42,15 @@ public class MapServices {
             StandardOpenOption.TRUNCATE_EXISTING
         );
     }
+
+    public static boolean buildMap(String map) {
+        try {
+
+            return true;
+        } catch(Exception e) {
+            e.printStackTrace();
+            return false
+        }
+    }
+
 }

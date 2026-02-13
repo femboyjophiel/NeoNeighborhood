@@ -2,6 +2,7 @@ package org.jophiel.api;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import org.jophiel.http.Router;
 import org.jophiel.utils.MapServices;
 
@@ -22,7 +23,11 @@ public class MapApi extends AbstractApi {
 
                 System.out.println("Map tiles request received");
                 org.json.JSONObject mapJson = MapServices.getMapJson();
-                sendJson(exchange, mapJson != null ? mapJson.toString() : "{}");
+                if (mapJson != null) { 
+                    sendJson(exchange, 200, mapJson.toString());
+                    return;
+                } 
+                sendStatus(exchange, 404);
             }
         });
 
@@ -31,6 +36,20 @@ public class MapApi extends AbstractApi {
             
             public void handle(HttpExchange exchange) throws IOException {
             
+            }
+        });
+
+        // Im sure theres a way to have this only in 'test' builds without releaing this to the public, but thats a lot of work so lets just make sure to remove it before the final build is released
+        post("/api/temp/build", new HttpHandler() {
+            public void handle(HttpExchange exchange) throws IOException {
+                String json = new String(exchange.getRequestBody().readAllBytes(), StandardCharsets.UTF_8)
+                System.out.println("Received json map: " + json);
+
+                if (MapServices.buildMap(json)) {
+                    sendStatus(exchange, 200);
+                    return;
+                }
+                sendStatus(exchange, 400);
             }
         });
     }

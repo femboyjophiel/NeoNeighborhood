@@ -8,7 +8,9 @@ import java.io.IOException;
 public abstract class AbstractApi {
     
     protected final Router router;
-    
+
+    private final String SITE = "null";
+
     protected AbstractApi(Router router) {
         this.router = router;
     }
@@ -24,23 +26,31 @@ public abstract class AbstractApi {
         router.post(path, handler);
     }
 
-    protected void sendJson(HttpExchange exchange, String json) throws IOException {
+    // Usually uses the 200 status
+    protected void sendJson(HttpExchange exchange, int status, String json) throws IOException {
         byte[] data = json.getBytes("UTF-8");
         exchange.getResponseHeaders().set("Content-Type", "application/json");
-        exchange.sendResponseHeaders(200, data.length);
+        exchange.getResponseHeaders().set("Access-Control-Allow-Origin", SITE);
+        exchange.getResponseHeaders().set("Access-Control-Allow-Methods", "GET, POST");
+        exchange.getResponseHeaders().set("Access-Control-Allow-Headers", "Authorization");
+        exchange.sendResponseHeaders(status, data.length);
         exchange.getResponseBody().write(data);
         exchange.close();
     }
 
     // Send a simple status with NO body
+    // * 200 : Action successful
     // * 201 : User created something successfully
-    // * 204 : Action successful
     // * 404 : Something could not be found
     // * 403 : Logged in but not allowed
-    // * 401 : Not Authorized (Not logged in)
-    // * 400 : Bad Request
+    // * 402 : Not Authorized (Not logged in)
+    // * 401 : API Error (Bad Request)
+    // * 400 : Internal Server Error
     // NOTE:  Statuses with bodies should not use this (200)
     protected void sendStatus(HttpExchange exchange, int status) throws IOException {
+        exchange.getResponseHeaders().set("Access-Control-Allow-Origin", SITE);
+        exchange.getResponseHeaders().set("Access-Control-Allow-Methods", "GET, POST");
+        exchange.getResponseHeaders().set("Access-Control-Allow-Headers", "Authorization");
         exchange.sendResponseHeaders(status, -1);
         exchange.getResponseBody().close();
     }
