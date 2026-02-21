@@ -21,13 +21,23 @@ body {
     width: 200%;
     height: 200%;
     margin: auto;
+    cursor: grab;
+    overflow: scroll;
+    transform: translate(-50%, -50%);
+}
 
+#land.dragging {
+    cursor: grabbing;
 }
 
 #land > div {
     border: 1px solid red;
     box-sizing: border-box;
     aspect-ratio: 1/1;
+}
+
+.Plains {
+    background-color: lightgreen;
 }
 
 .Forest {

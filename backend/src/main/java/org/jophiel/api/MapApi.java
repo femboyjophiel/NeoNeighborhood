@@ -42,7 +42,7 @@ public class MapApi extends AbstractApi {
         // Im sure theres a way to have this only in 'test' builds without releaing this to the public, but thats a lot of work so lets just make sure to remove it before the final build is released
         post("/api/temp/build", new HttpHandler() {
             public void handle(HttpExchange exchange) throws IOException {
-                String json = new String(exchange.getRequestBody().readAllBytes(), StandardCharsets.UTF_8)
+                String json = new String(exchange.getRequestBody().readAllBytes(), StandardCharsets.UTF_8);
                 System.out.println("Received json map: " + json);
 
                 if (MapServices.buildMap(json)) {
