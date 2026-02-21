@@ -9,7 +9,7 @@ public abstract class AbstractApi {
     
     protected final Router router;
 
-    private final String SITE = "null";
+    private final String SITE = "http://127.0.0.1:3000";
 
     protected AbstractApi(Router router) {
         this.router = router;

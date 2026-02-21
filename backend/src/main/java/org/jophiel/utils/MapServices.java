@@ -1,7 +1,6 @@
 package org.jophiel.utils;
 
 import org.json.JSONObject;
-import org.json.JSONArray;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
@@ -10,7 +9,6 @@ public class MapServices {
     private static final String MAP_FILE = "backend/src/main/java/org/jophiel/storage/world/map.json";
 
     public static String getMapData() {
-        System.out.println("Looking for map file at: " + java.nio.file.Paths.get(MAP_FILE).toAbsolutePath());
         try {
             return new String(java.nio.file.Files.readAllBytes(
                 java.nio.file.Paths.get(MAP_FILE)));

@@ -1,32 +1,36 @@
-html {
+html, body, #root {
     height: 100%;
     width: 100%;
-}
-
-body {
     margin: 0;
-    height: 100%;
-    width: 100%;
 }
 
-#root {
+#viewport {
     height: 100%;
     width: 100%;
+    overflow: auto;
+    cursor: grab;
+    scrollbar-width: none;
 }
 
 #land {
     display: grid;
-    grid-template-columns: repeat(16, 2fr);
-    grid-template-rows: repeat(16, 2fr);
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    transform-origin: top left;
+    will-change: transform;
     width: 200%;
     height: 200%;
-    margin: auto;
-    cursor: grab;
-    overflow: scroll;
-    transform: translate(-50%, -50%);
+
 }
 
-#land.dragging {
+#viewport, #land {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  
+    touch-action: none;      
+}
+
+#viewport.dragging {
     cursor: grabbing;
 }
 

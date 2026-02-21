@@ -53,46 +53,84 @@ fetchMap().then(map => {
     renderMap(map);
 });
 
+
+
+const viewport = document.getElementById("viewport");
+
 let isDown = false;
 let startX;
 let startY;
 let scrollLeft;
 let scrollTop;
+let scale = 1;
 
+// ---------- DRAG ----------
+function stopDrag() {
+    isDown = false;
+    viewport.classList.remove("dragging");
+}
 
-land.addEventListener("mousedown", (e) => {
+viewport.addEventListener("pointerdown", (e) => {
     isDown = true;
-    land.classList.add("dragging");
+    viewport.classList.add("dragging");
 
-    startX = e.pageX - land.offsetLeft;
-    startY = e.pageY - land.offsetTop;
+    startX = e.clientX;
+    startY = e.clientY;
 
-    scrollLeft = land.scrollLeft;
-    scrollTop = land.scrollTop;
+    scrollLeft = viewport.scrollLeft;
+    scrollTop = viewport.scrollTop;
 
+    viewport.setPointerCapture(e.pointerId);
 });
 
-land.addEventListener("mouseleave", () => {
-    isDown = false;
-    land.classList.remove("dragging");
-});
-
-land.addEventListener("mouseup", () => {
-    isDown = false;
-    land.classList.remove("dragging");
-});
-
-land.addEventListener("mousemove", (e) => {
+viewport.addEventListener("pointermove", (e) => {
     if (!isDown) return;
+
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+
+    viewport.scrollLeft = scrollLeft - dx;
+    viewport.scrollTop = scrollTop - dy;
+});
+
+viewport.addEventListener("pointerup", stopDrag);
+viewport.addEventListener("pointercancel", stopDrag);
+viewport.addEventListener("lostpointercapture", stopDrag);
+viewport.addEventListener("pointerleave", stopDrag);
+
+land.addEventListener("dragstart", (e) => e.preventDefault());
+
+// ---------- ZOOM ----------
+viewport.addEventListener("wheel", (e) => {
     e.preventDefault();
 
-    const x = e.pageX - land.offsetLeft;
-    const y = e.pageY - land.offsetTop;
+    const zoomIntensity = 0.0015;
+    const delta = -e.deltaY * zoomIntensity;
 
-    const walkX = (x - startX);
-    const walkY = (y - startY);
+    const rect = viewport.getBoundingClientRect();
 
-    land.scrollLeft = scrollLeft - walkX;
-    land.scrollTop = scrollTop - walkY;
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
 
-})
+    const contentX = (viewport.scrollLeft + mouseX) / scale;
+    const contentY = (viewport.scrollTop + mouseY) / scale;
+
+    scale = Math.min(Math.max(0.5, scale + delta), 3);
+
+    land.style.transformOrigin = "top left";
+    land.style.transform = `scale(${scale})`;
+
+    viewport.scrollLeft = contentX * scale - mouseX;
+    viewport.scrollTop = contentY * scale - mouseY;
+}, { passive: false });
+
+function centerBoard() {
+    const x = (land.scrollWidth * scale - viewport.clientWidth) / 2;
+    const y = (land.scrollHeight * scale - viewport.clientHeight) / 2;
+
+    viewport.scrollLeft = x;
+    viewport.scrollTop = y;
+}
+
+// wait for layout
+window.addEventListener("load", centerBoard);
