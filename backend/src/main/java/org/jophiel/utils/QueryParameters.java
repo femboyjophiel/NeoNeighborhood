@@ -40,5 +40,15 @@ public class QueryParameters {
 
     }
 
+    public String getString(String key, String stringDefault) {
+        try {
+            Object value = parameters.get(key);
+            if (value == null) return stringDefault;
+            return value.toString();
+        } catch (Exception e) {
+            return stringDefault;
+        }
+    }
+
 }
 
