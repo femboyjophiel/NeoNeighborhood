@@ -36,6 +36,7 @@ public class Router {
         
         
         Map<String, HttpHandler> methodRoutes = routes.get(method);
+        
         if (methodRoutes != null && methodRoutes.containsKey(path)) {
             methodRoutes.get(path).handle(exchange);
         } else {

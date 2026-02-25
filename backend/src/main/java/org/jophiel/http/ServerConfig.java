@@ -10,7 +10,8 @@ public class ServerConfig {
         
         AbstractApi[] modules = new AbstractApi[] {
             new MapApi(router),
-            new UserApi(router)
+            new UserApi(router),
+            new PlotApi(router)
         };
 
         for (AbstractApi module : modules) {

@@ -40,7 +40,7 @@ public class MapServices {
     }
     // This will edit a tile, ie. letting a user claim it as a plot or edit their pre-existing plot. 
     public static boolean editPlot(int x, int y, String newType, JSONObject properties) {
-         
+         return false;
     }
 
 

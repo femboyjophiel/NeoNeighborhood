@@ -9,11 +9,7 @@ public abstract class AbstractApi {
     
     protected final Router router;
 
-<<<<<<< Updated upstream
     private final String SITE = "http://127.0.0.1:3000";
-=======
-    private final String SITE = "null"; // This needs to be the url of whatever website will be communicating with the server
->>>>>>> Stashed changes
 
     protected AbstractApi(Router router) {
         this.router = router;

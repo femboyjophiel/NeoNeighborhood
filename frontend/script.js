@@ -44,6 +44,25 @@ function createMapFoundation() {
             land.appendChild(div)
     }
 }
+function register(username, password) {
+return fetch (`${SERVER_URL}:${SERVER_PORT}/api/user/register`, {
+    method: "POST",
+    headers {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        username: username,
+        password: password
+    })
+ })
+    .then(response => {
+        if (!response.ok) throw new Error(response.statusText);
+        return response.json();
+    })
+    .then(data => {
+        console.log("Successfully registered")
+    });
+}
 
 
 
