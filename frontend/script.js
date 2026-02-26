@@ -51,12 +51,8 @@ function register() {
 return fetch (`${SERVER_URL}:${SERVER_PORT}/api/user/register`, {
     method: "POST",
     headers: {
-<<<<<<< Updated upstream
-        "Content-Type": "application/json"
-=======
         "Content-Type": "application/json",
         "Expect": ""
->>>>>>> Stashed changes
     },
     body: JSON.stringify({
         username: rusername,
