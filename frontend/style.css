@@ -14,8 +14,8 @@ html, body, #root {
 
 #land {
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: repeat(32, 1fr);
+    grid-template-rows: repeat(32, 1fr);
     transform-origin: top left;
     will-change: transform;
     width: 200%;
