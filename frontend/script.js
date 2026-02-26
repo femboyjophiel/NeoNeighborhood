@@ -1,8 +1,8 @@
 const SERVER_URL = "http://localhost"
 const SERVER_PORT = 8080
 
-const MAP_LENGTHX = 16;
-const MAP_LENGTHY = 16;
+const MAP_LENGTHX = 32;
+const MAP_LENGTHY = 32;
 
 let defaultTile = "Plains";
 const land = document.getElementById("land");
