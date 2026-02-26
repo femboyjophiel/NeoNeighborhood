@@ -39,20 +39,43 @@ public class UserApi extends AbstractApi {
             }
         });
 
-        post("/api/user/register", new HttpHandler() {
-         public void handle(HttpExchange exchange) throws IOException { 
-            System.out.println("Registration request received: " + exchange.getRequestMethod());
 
-            BodyServices bs = BodyServices.parse(exchange);
-            final String username = bs.getFallback("username", "null");
-            final String password = bs.getFallback("password", "null");
-            if (!UserServices.validateUsername(username)) { sendJson(exchange, 401, "Invalid Username"); return; }
-            if (!UserServices.validatePassword(password)) { sendJson(exchange, 401, "Invalid Password"); return; }
+    post("/api/user/register", exchange -> {
+        BodyServices bs;
+        try {
+            bs = BodyServices.parse(exchange);
+        } catch (Exception e) {
+            sendJson(exchange, 400, "{\"error\":\"Bad JSON\"}");
+            return;
+        }
+        String username = bs.getFallback("username", "");
+        String password = bs.getFallback("password", "");
 
-            if (UserServices.getUser(username).equalsIgnoreCase("nope")) { sendStatus(exchange, 402); return; }
+        if (!UserServices.validateUsername(username)) {
+            sendJson(exchange, 401, "{\"error\":\"Invalid Username\"}");
+            return;
+        }
 
-            sendStatus(exchange, 201);
-        }});
-    }
+        if (!UserServices.validatePassword(password)) {
+            sendJson(exchange, 401, "{\"error\":\"Invalid Password\"}");
+            return;
+        }
+
+        if (!UserServices.getUser(username).equals("nope")) {
+            sendJson(exchange, 402, "{\"error\":\"User already exists\"}");
+            return;
+        }
+
+        try {
+            UserServices.createUser(username, password);
+        } catch (Exception e) {
+            sendJson(exchange, 400, "{\"error\":\"Error creating user\"}");
+            return;
+        }
+        sendJson(exchange, 201, "{\"success\":true}");
+    });
+        
+
+}
 
 }
