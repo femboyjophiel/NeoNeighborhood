@@ -4,7 +4,6 @@ import com.sun.net.httpserver.HttpHandler;
 import java.io.IOException;
 import org.jophiel.http.Router;
 import org.jophiel.utils.MapServices;
-import org.jophiel.utils.QueryParameters;
 import org.json.JSONObject;
 
 public class MapApi extends AbstractApi {

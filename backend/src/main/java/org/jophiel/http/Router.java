@@ -25,6 +25,10 @@ public class Router {
         register("POST", path, handler);
     }
 
+    public void options(String path, HttpHandler handler) {
+        register("OPTIONS", path, handler);
+    }
+
     // Api modules use this to register their routes,
     public void register(String method, String path, HttpHandler handler) {
         routes.computeIfAbsent(method, k -> new HashMap<>()).put(path, handler);
@@ -33,7 +37,7 @@ public class Router {
     public void handle(HttpExchange exchange) throws IOException {
         String method = exchange.getRequestMethod();
         String path = exchange.getRequestURI().getPath();
-        
+
         
         Map<String, HttpHandler> methodRoutes = routes.get(method);
         

@@ -2,8 +2,7 @@ package org.jophiel.api;
 
 
 import org.jophiel.http.Router;
-import org.jophiel.utils.MapServices;
-import org.jophiel.utils.QueryParameters;
+import org.jophiel.utils.BodyServices;
 import org.jophiel.utils.UserServices;
 import org.json.JSONObject;
 
@@ -19,30 +18,40 @@ public class UserApi extends AbstractApi {
 
     @Override
     public void register() {
+
+        options("/api/user/login", new HttpHandler() {
+            public void handle(HttpExchange exchange) throws IOException {
+                preflight(exchange);
+            }
+        });
         // Handles user login and registration
         post("/api/user/login", new HttpHandler() {
          public void handle(HttpExchange exchange) throws IOException {   
         
-            System.out.println("Login request received");
+            sendStatus(exchange, 200);
 
             
         }});
 
+        options("/api/user/register", new HttpHandler() {
+            public void handle(HttpExchange exchange) throws IOException {
+                preflight(exchange);
+            }
+        });
+
         post("/api/user/register", new HttpHandler() {
-         public void handle(HttpExchange exchange) throws IOException {   
-            System.out.println("Registration request received");
+         public void handle(HttpExchange exchange) throws IOException { 
+            System.out.println("Registration request received: " + exchange.getRequestMethod());
 
-            QueryParameters qp = QueryParameters.parse(exchange.getRequestURI().getQuery());
+            BodyServices bs = BodyServices.parse(exchange);
+            final String username = bs.getFallback("username", "null");
+            final String password = bs.getFallback("password", "null");
+            if (!UserServices.validateUsername(username)) { sendJson(exchange, 401, "Invalid Username"); return; }
+            if (!UserServices.validatePassword(password)) { sendJson(exchange, 401, "Invalid Password"); return; }
 
-            final String username = qp.getString("username", "");
-            final String password = qp.getString("password", "");
+            if (UserServices.getUser(username).equalsIgnoreCase("nope")) { sendStatus(exchange, 402); return; }
 
-            if (!UserServices.validateUsername(username)) { sendStatus(exchange, 401); return; }
-            if (!UserServices.validatePassword(password)) { sendStatus(exchange, 401); return; }
-
-            if (UserServices.getUser(username) == null) { sendStatus(exchange, 402); return; }
-
-
+            sendStatus(exchange, 201);
         }});
     }
 

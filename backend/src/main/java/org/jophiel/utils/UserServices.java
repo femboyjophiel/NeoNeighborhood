@@ -11,12 +11,11 @@ public class UserServices {
             return "yup";
         };
 
-        return null;
+        return "nope";
     }
     
     public static boolean validateUsername(String username) {
         if (username == null || username.isBlank()) return false;
-
         String regex = 
             "^(?!(?i)(con|prn|aux|nul|com[0-9]|lpt[0-9])$)" + // Reserved windows folder names
             "(?![._-])" + // No leading dot/underscore/hyphen

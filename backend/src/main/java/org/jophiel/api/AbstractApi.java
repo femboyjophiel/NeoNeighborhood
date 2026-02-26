@@ -9,7 +9,7 @@ public abstract class AbstractApi {
     
     protected final Router router;
 
-    private final String SITE = "http://127.0.0.1:3000";
+    private final String SITE = "*"; //"http://127.0.0.1:3000";
 
     protected AbstractApi(Router router) {
         this.router = router;
@@ -26,6 +26,10 @@ public abstract class AbstractApi {
         router.post(path, handler);
     }
 
+    protected void options(String path, HttpHandler handler) {
+        router.options(path, handler);
+    }
+
 
     // Send a simple status with NO body
     // * 200 : Action successful
@@ -35,25 +39,32 @@ public abstract class AbstractApi {
     // * 402 : Not Authorized (Not logged in)
     // * 401 : API Error (Bad Request)
     // * 400 : Internal Server Error
-    // NOTE:  Statuses with bodies should not use this
     protected void sendStatus(HttpExchange exchange, int status) throws IOException {
-        exchange.getResponseHeaders().set("Access-Control-Allow-Origin", SITE);
-        exchange.getResponseHeaders().set("Access-Control-Allow-Methods", "GET, POST");
-        exchange.getResponseHeaders().set("Access-Control-Allow-Headers", "Authorization");
+        crossOrigin(exchange);
         exchange.sendResponseHeaders(status, -1);
         exchange.getResponseBody().close();
     }
     
-    // A status with a body (usually to explain errors) 
+    // A status with a body 
     protected void sendJson(HttpExchange exchange, int status, String json) throws IOException {
         byte[] data = json.getBytes("UTF-8");
         exchange.getResponseHeaders().set("Content-Type", "application/json");
-        exchange.getResponseHeaders().set("Access-Control-Allow-Origin", SITE);
-        exchange.getResponseHeaders().set("Access-Control-Allow-Methods", "GET, POST");
-        exchange.getResponseHeaders().set("Access-Control-Allow-Headers", "Authorization");
+        crossOrigin(exchange);
         exchange.sendResponseHeaders(status, data.length);
         exchange.getResponseBody().write(data);
         exchange.close();
+    }
+
+    protected void crossOrigin(HttpExchange exchange) throws IOException {
+        exchange.getResponseHeaders().set("Access-Control-Allow-Origin", SITE);
+        exchange.getResponseHeaders().set("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+        exchange.getResponseHeaders().set("Access-Control-Allow-Headers", "Authorization, Content-Type");
+    }
+    
+
+    protected void preflight(HttpExchange exchange) throws IOException {
+        crossOrigin(exchange);
+        exchange.sendResponseHeaders(200, -1);     
     }
 
 }

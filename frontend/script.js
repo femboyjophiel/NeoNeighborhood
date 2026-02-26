@@ -44,15 +44,23 @@ function createMapFoundation() {
             land.appendChild(div)
     }
 }
-function register(username, password) {
+function register() {
+    let rusername = document.getElementById("register-username").value;
+    let rpassword = document.getElementById("register-password").value;
+
 return fetch (`${SERVER_URL}:${SERVER_PORT}/api/user/register`, {
     method: "POST",
     headers: {
+<<<<<<< Updated upstream
         "Content-Type": "application/json"
+=======
+        "Content-Type": "application/json",
+        "Expect": ""
+>>>>>>> Stashed changes
     },
     body: JSON.stringify({
-        username: username,
-        password: password
+        username: rusername,
+        password: rpassword
     })
  })
     .then(response => {
@@ -63,7 +71,7 @@ return fetch (`${SERVER_URL}:${SERVER_PORT}/api/user/register`, {
         console.log("Successfully registered")
     });
 }
-
+register();
 
 
 createMapFoundation();
@@ -71,6 +79,8 @@ applyDefault(defaultTile);
 fetchMap().then(map => {
     renderMap(map);
 });
+
+
 
 
 

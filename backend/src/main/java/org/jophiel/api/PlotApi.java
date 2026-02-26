@@ -3,8 +3,8 @@ package org.jophiel.api;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
+import org.jophiel.utils.BodyServices;
 import org.jophiel.utils.MapServices;
-import org.jophiel.utils.QueryParameters;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -24,13 +24,13 @@ public class PlotApi extends AbstractApi {
             public void handle(HttpExchange exchange) throws IOException {
                 System.out.println("Info about a tile request recieved");
 
-                QueryParameters qp = QueryParameters.parse(exchange.getRequestURI().getQuery());
+                BodyServices bs = BodyServices.parse(exchange);
 
-                final int x = qp.getInt("x", -1);
-                final int y = qp.getInt("y", -1);
+                final int x = Integer.parseInt(bs.getFallback("x", "-1"));
+                final int y = Integer.parseInt(bs.getFallback("y", "-1"));
 
                 if (x<0||y<0) {
-                    sendStatus(exchange, 401);
+                    sendJson(exchange, 401, "Invalid Coordinates");
                     return;
                 }
 
