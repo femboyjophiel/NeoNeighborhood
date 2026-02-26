@@ -47,7 +47,7 @@ function createMapFoundation() {
 function register(username, password) {
 return fetch (`${SERVER_URL}:${SERVER_PORT}/api/user/register`, {
     method: "POST",
-    headers {
+    headers: {
         "Content-Type": "application/json"
     },
     body: JSON.stringify({
