@@ -1,5 +1,4 @@
 target/
-backend/src/main/java/org/jophiel/storage/users
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
