@@ -48,26 +48,18 @@ function register() {
     let rusername = document.getElementById("register-username").value;
     let rpassword = document.getElementById("register-password").value;
 
-return fetch (`${SERVER_URL}:${SERVER_PORT}/api/user/register`, {
+fetch(`${SERVER_URL}:${SERVER_PORT}/api/user/register`, {
     method: "POST",
-    headers: {
-        "Content-Type": "application/json",
-        "Expect": ""
-    },
-    body: JSON.stringify({
-        username: rusername,
-        password: rpassword
-    })
- })
-    .then(response => {
-        if (!response.ok) throw new Error(response.statusText);
-        return response.json();
-    })
-    .then(data => {
-        console.log("Successfully registered")
-    });
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ username: rusername, password: rpassword })
+})
+.then(response => {
+    if (!response.ok) throw new Error(response.statusText);
+    return response.json();
+})
+.then(data => console.log("Successfully registered:", data))
+.catch(err => console.error("Registration error:", err));
 }
-register();
 
 
 createMapFoundation();

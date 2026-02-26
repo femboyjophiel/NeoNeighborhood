@@ -4,6 +4,7 @@ import org.jophiel.http.Router;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 public abstract class AbstractApi {
     
@@ -47,12 +48,15 @@ public abstract class AbstractApi {
     
     // A status with a body 
     protected void sendJson(HttpExchange exchange, int status, String json) throws IOException {
-        byte[] data = json.getBytes("UTF-8");
-        exchange.getResponseHeaders().set("Content-Type", "application/json");
+        byte[] data = json.getBytes(StandardCharsets.UTF_8);
         crossOrigin(exchange);
+        exchange.getResponseHeaders().set("Content-Type", "application/json; charset=UTF-8");
         exchange.sendResponseHeaders(status, data.length);
-        exchange.getResponseBody().write(data);
-        exchange.close();
+
+        try (var os = exchange.getResponseBody()) {
+            os.write(data);
+            os.flush();
+        }
     }
 
     protected void crossOrigin(HttpExchange exchange) throws IOException {
@@ -64,7 +68,11 @@ public abstract class AbstractApi {
 
     protected void preflight(HttpExchange exchange) throws IOException {
         crossOrigin(exchange);
-        exchange.sendResponseHeaders(200, -1);     
+        exchange.sendResponseHeaders(200, 0); // zero-length body
+        try (var os = exchange.getResponseBody()) {
+            os.write(new byte[0]);
+            os.flush();
+        }
     }
 
 }
