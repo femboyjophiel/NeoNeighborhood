@@ -27,22 +27,29 @@ public class ServerConfig {
 server.createContext("/api", router::handle);
 
 server.createContext("/", exchange -> {
-    String path = "/home/jophi/NeoNeighborhood/frontend" + exchange.getRequestURI().getPath();
-    File file = new File(path);
-    if (!file.exists() || file.isDirectory()) {
-        exchange.sendResponseHeaders(404, 0);
-        exchange.close();
-        return;
-    }
+    String requestedPath = exchange.getRequestURI().getPath();
 
-    String mime = Files.probeContentType(file.toPath());
-    if (mime == null) mime = "application/octet-stream";
+    File file = new File("/home/jophi/neoneighborhood/frontend" + requestedPath);
 
-    byte[] bytes = Files.readAllBytes(file.toPath());
-    exchange.getResponseHeaders().add("Content-Type", mime);
-    exchange.sendResponseHeaders(200, bytes.length);
-    try (OutputStream os = exchange.getResponseBody()) {
-        os.write(bytes);
+    if (file.exists() && !file.isDirectory()) {
+        String mime = Files.probeContentType(file.toPath());
+        if (mime == null) mime = "application/octet-stream";
+
+        byte[] bytes = Files.readAllBytes(file.toPath());
+        exchange.getResponseHeaders().add("Content-Type", mime);
+        exchange.sendResponseHeaders(200, bytes.length);
+        try (OutputStream os = exchange.getResponseBody()) {
+            os.write(bytes);
+        }
+    } else {
+        // Fallback to index.html for SPA routing
+        File indexFile = new File("/home/jophi/neoneighborhood/index.html");
+        byte[] bytes = Files.readAllBytes(indexFile.toPath());
+        exchange.getResponseHeaders().add("Content-Type", "text/html");
+        exchange.sendResponseHeaders(200, bytes.length);
+        try (OutputStream os = exchange.getResponseBody()) {
+            os.write(bytes);
+        }
     }
 });
 
