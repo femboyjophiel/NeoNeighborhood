@@ -26,13 +26,8 @@ public class ServerConfig {
             module.register();
         }
 
-        // API routes under /api
         server.createContext("/api", router::handle);
 
-// API routes
-server.createContext("/api", router::handle);
-
-// Static files
 server.createContext("/resources", exchange -> {
     String path = exchange.getRequestURI().getPath().replaceFirst("/resources/", "");
     File file = new File("/home/jophi/NeoNeighborhood/frontend", path);
@@ -49,7 +44,6 @@ server.createContext("/resources", exchange -> {
     try (OutputStream os = exchange.getResponseBody()) { os.write(bytes); }
 });
 
-// SPA fallback
 server.createContext("/", exchange -> {
     File indexFile = new File("/home/jophi/NeoNeighborhood/frontend/index.html");
     byte[] bytes = Files.readAllBytes(indexFile.toPath());
