@@ -1,19 +1,21 @@
 package org.jophiel.http;
 
+import org.jophiel.api.*;
+
+import com.sun.net.httpserver.HttpExchange;
+import com.sun.net.httpserver.HttpHandler;
+import com.sun.net.httpserver.HttpServer;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.file.Files;
-import com.sun.net.httpserver.HttpExchange;
-import com.sun.net.httpserver.HttpHandler;
-import org.jophiel.api.*;
-
-import com.sun.net.httpserver.HttpServer;
 
 public class ServerConfig {
+
     public static void configure(HttpServer server) {
         Router router = new Router();
-        
+
         AbstractApi[] modules = new AbstractApi[] {
             new MapApi(router),
             new UserApi(router),
@@ -24,35 +26,44 @@ public class ServerConfig {
             module.register();
         }
 
-server.createContext("/api", router::handle);
+        // API routes under /api
+        server.createContext("/api", router::handle);
 
-server.createContext("/", exchange -> {
-    String requestedPath = exchange.getRequestURI().getPath();
+        // Everything else (static + SPA fallback)
+        server.createContext("/", exchange -> {
+            String path = exchange.getRequestURI().getPath();
 
-    File file = new File("/home/jophi/neoneighborhood/frontend" + requestedPath);
+            // Ignore /api paths
+            if (path.startsWith("/api")) {
+                exchange.sendResponseHeaders(404, 0);
+                exchange.close();
+                return;
+            }
 
-    if (file.exists() && !file.isDirectory()) {
-        String mime = Files.probeContentType(file.toPath());
-        if (mime == null) mime = "application/octet-stream";
+            // Map request to a real file
+            File file = new File("/home/jophi/NeoNeighborhood/frontend" + path);
 
-        byte[] bytes = Files.readAllBytes(file.toPath());
-        exchange.getResponseHeaders().add("Content-Type", mime);
-        exchange.sendResponseHeaders(200, bytes.length);
-        try (OutputStream os = exchange.getResponseBody()) {
-            os.write(bytes);
-        }
-    } else {
-        // Fallback to index.html for SPA routing
-        File indexFile = new File("/home/jophi/neoneighborhood/index.html");
-        byte[] bytes = Files.readAllBytes(indexFile.toPath());
-        exchange.getResponseHeaders().add("Content-Type", "text/html");
-        exchange.sendResponseHeaders(200, bytes.length);
-        try (OutputStream os = exchange.getResponseBody()) {
-            os.write(bytes);
-        }
-    }
-});
+            if (file.exists() && !file.isDirectory()) {
+                // Serve static file
+                String mime = Files.probeContentType(file.toPath());
+                if (mime == null) mime = "application/octet-stream";
 
-
+                byte[] bytes = Files.readAllBytes(file.toPath());
+                exchange.getResponseHeaders().add("Content-Type", mime);
+                exchange.sendResponseHeaders(200, bytes.length);
+                try (OutputStream os = exchange.getResponseBody()) {
+                    os.write(bytes);
+                }
+            } else {
+                // SPA fallback (index.html)
+                File indexFile = new File("/home/jophi/NeoNeighborhood/frontend/index.html");
+                byte[] bytes = Files.readAllBytes(indexFile.toPath());
+                exchange.getResponseHeaders().add("Content-Type", "text/html");
+                exchange.sendResponseHeaders(200, bytes.length);
+                try (OutputStream os = exchange.getResponseBody()) {
+                    os.write(bytes);
+                }
+            }
+        });
     }
 }
