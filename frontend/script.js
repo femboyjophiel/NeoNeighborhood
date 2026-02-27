@@ -1,5 +1,5 @@
-const SERVER_URL = "http://localhost"
-const SERVER_PORT = 8080
+const SERVER_URL = "https://neoneighborhood.jophiel.org";
+const SERVER_PORT = ""//":8080";
 
 const MAP_LENGTHX = 32;
 const MAP_LENGTHY = 32;
@@ -9,7 +9,7 @@ const land = document.getElementById("land");
 
 // Gets map.json in its entirety
 function fetchMap() {
-return fetch (`${SERVER_URL}:${SERVER_PORT}/api/map/tiles`) 
+return fetch (`${SERVER_URL}${SERVER_PORT}/api/map/tiles`) 
     .then(response => {
         if (!response.ok) throw new Error(response.statusText);
         return response.json();
