@@ -31,7 +31,7 @@ public class ServerConfig {
 server.createContext("/resources", exchange -> {
     String path = exchange.getRequestURI().getPath().replaceFirst("/resources/", "");
     if (path.startsWith("/")) path = path.substring(1);
-    File file = new File("/home/jophi/NeoNeighborhood/frontend", path);
+    File file = new File("/home/jophi/NeoNeighborhood/frontend/resources", path);
     if (!file.exists() || file.isDirectory()) {
         exchange.sendResponseHeaders(404, 0);
         exchange.close();
