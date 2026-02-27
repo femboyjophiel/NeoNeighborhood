@@ -1,4 +1,5 @@
 package org.jophiel.utils;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -39,14 +40,21 @@ public class UserServices {
         return password.matches(regex);
     }
 
-    public static void createUser(String username, String password) throws Exception {
+    public static void createUser(String username, String password) throws IOException {
         // Create user folder
         Path userPath = Paths.get(usersPath, username);
         Files.createDirectories(userPath);
 
         // Store password in a file inside the folder
         Path passwordFile = userPath.resolve("password.txt");
-        Files.writeString(passwordFile, password);
+        Files.writeString(passwordFile, EncyptionServices.hashPassword(password));
+    }
+
+    public static boolean validateLogin(String username, String password) throws IOException {
+        Path passwordFile = Paths.get(usersPath, username, "password.txt");
+        if (!Files.exists(passwordFile)) return false;
+        String storedHash = Files.readString(passwordFile);
+        return EncyptionServices.verifyPassword(password, storedHash);
     }
 
 

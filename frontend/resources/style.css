@@ -12,7 +12,7 @@ html, body, #root {
     scrollbar-width: none;
 }
 
-#land {
+#land, #decor {
     display: grid;
     grid-template-columns: repeat(32, 1fr);
     grid-template-rows: repeat(32, 1fr);
@@ -23,7 +23,13 @@ html, body, #root {
 
 }
 
-#viewport, #land {
+#decor {
+    display: inline-grid;
+    background: none;
+    opacity: 0;
+}
+
+#viewport, #land, #decor {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;  

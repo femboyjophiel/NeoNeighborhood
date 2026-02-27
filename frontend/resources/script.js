@@ -1,5 +1,5 @@
-const SERVER_URL = "http://localhost"
-const SERVER_PORT = 8080
+const SERVER_URL = "http://localhost"//"https://neoneighborhood.jophiel.org";
+const SERVER_PORT = ":8080";
 
 const MAP_LENGTHX = 32;
 const MAP_LENGTHY = 32;
@@ -9,7 +9,7 @@ const land = document.getElementById("land");
 
 // Gets map.json in its entirety
 function fetchMap() {
-return fetch (`${SERVER_URL}:${SERVER_PORT}/api/map/tiles`) 
+return fetch (`${SERVER_URL}${SERVER_PORT}/api/map/tiles`) 
     .then(response => {
         if (!response.ok) throw new Error(response.statusText);
         return response.json();
@@ -39,16 +39,19 @@ function renderMap(map) {
 function createMapFoundation() {
     for (let x = 0; x < MAP_LENGTHX * MAP_LENGTHY; x++) {
             let div = document.createElement("div");
-            div.classList.add(`x:${x%MAP_LENGTHX}`, `y:${Math.floor(x/MAP_LENGTHY)}`); //Add x and y seperately so rows/columns can be altered if need.
+            div.classList.add(`x:${x%MAP_LENGTHX}`, `y:${Math.floor(x/MAP_LENGTHY)}`); //Add x and y seperately so rows/columns can be altered if need. (doesn do anything currently)
             div.id = x; //This will be used most often to target tiles specifically
+            decor.appendChild(div);
             land.appendChild(div)
+            
     }
 }
+
 function register() {
     let rusername = document.getElementById("register-username").value;
     let rpassword = document.getElementById("register-password").value;
 
-fetch(`${SERVER_URL}:${SERVER_PORT}/api/user/register`, {
+fetch(`${SERVER_URL}${SERVER_PORT}/api/user/register`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ username: rusername, password: rpassword })
@@ -57,8 +60,36 @@ fetch(`${SERVER_URL}:${SERVER_PORT}/api/user/register`, {
     if (!response.ok) throw new Error(response.statusText);
     return response.json();
 })
-.then(data => console.log("Successfully registered:", data))
+.then(data => {
+    console.log("Successfully registered:", data)
+    login(rusername, rpassword);
+})
 .catch(err => console.error("Registration error:", err));
+}
+
+function login(username, password) {
+    let lusername; 
+    let lpassword;
+
+    if (username && password) {
+        lusername = username;
+        lpassword = password;
+    } else {
+        lusername = document.getElementById("login-username").value;
+        lpassword = document.getElementById("login-password").value;
+    }
+
+fetch(`${SERVER_URL}${SERVER_PORT}/api/user/login`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ username: lusername, password: lpassword })
+})
+.then(response => {
+    if (!response.ok) throw new Error(response.statusText);
+    return response.json();
+})
+.then(data => console.log("Successfully logged in:", data))
+.catch(err => console.error("Login error:", err));
 }
 
 

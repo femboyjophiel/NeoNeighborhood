@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="favicon.ico" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="resources/style.css" />
     <title>WebLand</title>
   </head>
   <body>
@@ -14,10 +14,15 @@
         <input id="register-username" type="text" placeholder="username">
         <input id="register-password" type="password" placeholder="password">
         <button id="register-button" onclick="register()">register</button>
+
+        <input id="login-username" type="text" placeholder="username">
+        <input id="login-password" type="password" placeholder="password">
+        <button id="login-button" onclick="login()">login</button>
       </div>
       <div id = "viewport">
+        <div id="decor"></div>
         <div id="land"></div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="resources/script.js"></script>
   </body>
