@@ -74,6 +74,31 @@ public class UserApi extends AbstractApi {
         }
         sendJson(exchange, 201, "{\"success\":true}");
     });
+
+    options("/api/user/login", new HttpHandler() {
+        public void handle(HttpExchange exchange) throws IOException {
+            preflight(exchange);
+        }
+    });
+
+    post("/api/user/login", exchange -> {
+        BodyServices bs;
+        try {
+            bs = BodyServices.parse(exchange);
+        } catch (Exception e) {
+            sendJson(exchange, 400, "{\"error\":\"Bad JSON\"}");
+            return;
+        }
+        String username = bs.getFallback("username", "");
+        String password = bs.getFallback("password", "");
+
+        if (!UserServices.validateLogin(username, password)) {
+            sendJson(exchange, 401, "{\"error\":\"Invalid credentials\"}");
+            return;
+        }
+
+        sendJson(exchange, 200, "{\"success\":true}");
+    });
         
 
 }

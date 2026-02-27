@@ -2,7 +2,7 @@ package org.jophiel.utils;
 
 import org.mindrot.jbcrypt.BCrypt;
 
-public class PasswordServices {
+public class EncyptionServices {
     
     public static String hashPassword(String password) {
         return BCrypt.hashpw(password, BCrypt.gensalt(8)); // Lower cost factor, server will be on slow hardware

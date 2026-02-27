@@ -23,6 +23,12 @@ html, body, #root {
 
 }
 
+#decor {
+    display: inline-grid;
+    background: none;
+    opacity: 0;
+}
+
 #viewport, #land, #decor {
     -webkit-user-select: none;
     -ms-user-select: none;
