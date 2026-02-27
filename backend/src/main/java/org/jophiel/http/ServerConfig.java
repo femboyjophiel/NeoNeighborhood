@@ -24,11 +24,10 @@ public class ServerConfig {
             module.register();
         }
 
-server.createContext("/api", router::handle); // API routes
+server.createContext("/api", router::handle);
 
-// Serve static files (JS, CSS, images)
 server.createContext("/", exchange -> {
-    String path = "/home/pi/NeoNeighborhood" + exchange.getRequestURI().getPath();
+    String path = "/home/jophi/NeoNeighborhood/frontend" + exchange.getRequestURI().getPath();
     File file = new File(path);
     if (!file.exists() || file.isDirectory()) {
         exchange.sendResponseHeaders(404, 0);
@@ -47,16 +46,6 @@ server.createContext("/", exchange -> {
     }
 });
 
-// Fallback for SPA
-server.createContext("/", exchange -> {
-    File file = new File("/home/pi/NeoNeighborhood/index.html");
-    byte[] bytes = Files.readAllBytes(file.toPath());
-    exchange.getResponseHeaders().add("Content-Type", "text/html");
-    exchange.sendResponseHeaders(200, bytes.length);
-    try (OutputStream os = exchange.getResponseBody()) {
-        os.write(bytes);
-    }
-});
 
     }
 }
