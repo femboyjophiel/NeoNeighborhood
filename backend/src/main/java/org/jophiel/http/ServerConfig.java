@@ -31,7 +31,12 @@ public class ServerConfig {
 
 server.createContext("/", exchange -> {
     String path = exchange.getRequestURI().getPath();
-    File file = new File("/home/jophi/NeoNeighborhood/frontend" + path);
+
+    // Strip leading slash
+    if (path.startsWith("/")) path = path.substring(1);
+
+    File baseDir = new File("/home/jophi/NeoNeighborhood/frontend");
+    File file = new File(baseDir, path);
 
     if (file.exists() && file.isFile()) {
         String mime = Files.probeContentType(file.toPath());
@@ -42,7 +47,7 @@ server.createContext("/", exchange -> {
         try (OutputStream os = exchange.getResponseBody()) { os.write(bytes); }
     } else {
         // SPA fallback
-        File indexFile = new File("/home/jophi/NeoNeighborhood/frontend/index.html");
+        File indexFile = new File(baseDir, "index.html");
         byte[] bytes = Files.readAllBytes(indexFile.toPath());
         exchange.getResponseHeaders().add("Content-Type", "text/html");
         exchange.sendResponseHeaders(200, bytes.length);
