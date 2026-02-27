@@ -27,7 +27,7 @@ public class ServerConfig {
 server.createContext("/api", router::handle); // API routes
 
 // Serve static files (JS, CSS, images)
-server.createContext("/static", exchange -> {
+server.createContext("/", exchange -> {
     String path = "/home/pi/NeoNeighborhood" + exchange.getRequestURI().getPath();
     File file = new File(path);
     if (!file.exists() || file.isDirectory()) {
