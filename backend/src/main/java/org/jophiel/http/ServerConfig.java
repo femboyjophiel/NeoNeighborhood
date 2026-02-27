@@ -24,32 +24,39 @@ public class ServerConfig {
             module.register();
         }
 
+server.createContext("/api", router::handle); // API routes
 
-        
-                // Static website route (index.html)
-        server.createContext("/", new HttpHandler() {
-            @Override
-            public void handle(HttpExchange exchange) throws IOException {
-                // Hardcoded path to your index.html
-                File file = new File("/home/jophi/NeoNeighborhood/frontend/index.html");
+// Serve static files (JS, CSS, images)
+server.createContext("/static", exchange -> {
+    String path = "/home/pi/NeoNeighborhood" + exchange.getRequestURI().getPath();
+    File file = new File(path);
+    if (!file.exists() || file.isDirectory()) {
+        exchange.sendResponseHeaders(404, 0);
+        exchange.close();
+        return;
+    }
 
-                if (!file.exists()) {
-                    String response = "404 Not Found";
-                    exchange.sendResponseHeaders(404, response.length());
-                    try (OutputStream os = exchange.getResponseBody()) {
-                        os.write(response.getBytes());
-                    }
-                    return;
-                }
+    String mime = Files.probeContentType(file.toPath());
+    if (mime == null) mime = "application/octet-stream";
 
-                byte[] bytes = Files.readAllBytes(file.toPath());
-                exchange.getResponseHeaders().add("Content-Type", "text/html");
-                exchange.sendResponseHeaders(200, bytes.length);
-                try (OutputStream os = exchange.getResponseBody()) {
-                    os.write(bytes);
-                }
-            }
-        });
+    byte[] bytes = Files.readAllBytes(file.toPath());
+    exchange.getResponseHeaders().add("Content-Type", mime);
+    exchange.sendResponseHeaders(200, bytes.length);
+    try (OutputStream os = exchange.getResponseBody()) {
+        os.write(bytes);
+    }
+});
+
+// Fallback for SPA
+server.createContext("/", exchange -> {
+    File file = new File("/home/pi/NeoNeighborhood/index.html");
+    byte[] bytes = Files.readAllBytes(file.toPath());
+    exchange.getResponseHeaders().add("Content-Type", "text/html");
+    exchange.sendResponseHeaders(200, bytes.length);
+    try (OutputStream os = exchange.getResponseBody()) {
+        os.write(bytes);
+    }
+});
 
     }
 }
