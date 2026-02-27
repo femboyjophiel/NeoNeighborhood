@@ -41,14 +41,16 @@ function createMapFoundation() {
             let div = document.createElement("div");
             div.classList.add(`x:${x%MAP_LENGTHX}`, `y:${Math.floor(x/MAP_LENGTHY)}`); //Add x and y seperately so rows/columns can be altered if need.
             div.id = x; //This will be used most often to target tiles specifically
+            decor.appendChild(div);
             land.appendChild(div)
+            
     }
 }
 function register() {
     let rusername = document.getElementById("register-username").value;
     let rpassword = document.getElementById("register-password").value;
 
-fetch(`${SERVER_URL}:${SERVER_PORT}/api/user/register`, {
+fetch(`${SERVER_URL}${SERVER_PORT}/api/user/register`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ username: rusername, password: rpassword })

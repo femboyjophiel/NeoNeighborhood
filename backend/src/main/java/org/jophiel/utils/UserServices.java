@@ -46,7 +46,7 @@ public class UserServices {
 
         // Store password in a file inside the folder
         Path passwordFile = userPath.resolve("password.txt");
-        Files.writeString(passwordFile, password);
+        Files.writeString(passwordFile, PasswordServices.hashPassword(password));
     }
 
 
