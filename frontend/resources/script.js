@@ -99,7 +99,7 @@ function renderMap(data) {
 
 // ================= INIT =================
 document.addEventListener("DOMContentLoaded", async () => {
-  createMapFoundation(); // build the grid first
+  buildBoard(); // build the grid first
 
   // Load spritesheets
   await Promise.all(Object.keys(sheetPalettes).map(name => loadSpriteSheet(name, tileSize)));
