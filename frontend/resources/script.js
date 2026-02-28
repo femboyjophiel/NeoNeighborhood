@@ -44,18 +44,16 @@ function buildBoard() {
 }
 
 // ================= LOAD SPRITES =================
-async function loadSpriteSheet(name, sizePx) {
+function loadSpriteSheet(sheetName, sizePx) {
   return new Promise(resolve => {
     const img = new Image();
-    img.src = `resources/map/${name}`; // your spritesheet path
+    img.src = `/map/${sheetName}`;
     img.onload = () => {
       const cols = Math.floor(img.width / sizePx);
       const rows = Math.floor(img.height / sizePx);
       const tiles = [];
-
       const canvas = document.createElement("canvas");
-      canvas.width = sizePx;
-      canvas.height = sizePx;
+      canvas.width = canvas.height = sizePx;
       const ctx = canvas.getContext("2d");
 
       for (let y = 0; y < rows; y++) {
@@ -63,12 +61,14 @@ async function loadSpriteSheet(name, sizePx) {
           ctx.clearRect(0, 0, sizePx, sizePx);
           ctx.drawImage(img, x * sizePx, y * sizePx, sizePx, sizePx, 0, 0, sizePx, sizePx);
           const url = canvas.toDataURL();
-          const tileName = `${name}_${y}_${x}`;
+          
+          // generate the exact same name format your JSON uses
+          const tileName = `${sheetName}_${y}_${x}`; 
           tiles.push({ name: tileName, url });
         }
       }
 
-      sheetPalettes[name] = tiles;
+      sheetPalettes[sheetName] = tiles;
       resolve();
     };
   });
@@ -76,21 +76,22 @@ async function loadSpriteSheet(name, sizePx) {
 
 // ================= RENDER MAP =================
 function renderMap(data) {
-  if (!data || !Array.isArray(data.grid)) return;
-
   data.grid.forEach((row, y) => {
     row.forEach((cell, x) => {
       layers.forEach(l => {
-        if (!cell[l]) return;
+        const tileValue = cell[l];
+        if (!tileValue) return;
 
-        const tile = document.querySelector(`.tile[data-x="${x}"][data-y="${y}"]`);
-        const layerDiv = tile.querySelector(`.${l}`);
+        const tileDiv = document.querySelector(`.tile[data-x="${x}"][data-y="${y}"]`);
+        const layerDiv = tileDiv.querySelector(`.${l}`);
 
-        // Find sliced sprite by name
-        const sheetTile = Object.values(sheetPalettes).flat().find(t => t.name === cell[l]);
-        if (sheetTile) layerDiv.style.backgroundImage = `url(${sheetTile.url})`;
+        // Look up the sliced sprite by exact JSON name
+        const sheetTile = Object.values(sheetPalettes).flat()
+          .find(t => t.name === tileValue);
 
-        grid[y][x][l] = cell[l];
+        if (sheetTile) {
+          layerDiv.style.backgroundImage = `url(${sheetTile.url})`;
+        }
       });
     });
   });
