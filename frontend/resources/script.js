@@ -47,7 +47,7 @@ function buildBoard() {
 function loadSpriteSheet(sheetName, sizePx) {
   return new Promise(resolve => {
     const img = new Image();
-    img.src = `/map/${sheetName}`;
+    img.src = `resources/map/${sheetName}`;
     img.onload = () => {
       const cols = Math.floor(img.width / sizePx);
       const rows = Math.floor(img.height / sizePx);
