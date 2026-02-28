@@ -13,9 +13,11 @@ html, body, #root {
 
 #land {
     display: grid;
-    grid-template-columns: repeat(32, 20px);
-    grid-template-rows: repeat(32, 20px);
+    grid-template-columns: repeat(32, 32px);
+    grid-template-rows: repeat(32, 32px);
     transform-origin: top left;
+    height: 200%;
+    width: 200%;
     will-change: transform;
 }
 
