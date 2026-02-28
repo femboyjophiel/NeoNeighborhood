@@ -3,7 +3,7 @@ SERVER_PORT = "";
 
 // ================= CONFIG =================
 const BOARD_SIZE = 32;
-let tileSize = 20;
+let tileSize = 32;
 const layers = ["tiles", "decor", "overlay"];
 let grid = [];
 
