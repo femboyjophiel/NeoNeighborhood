@@ -98,15 +98,13 @@ function renderMap(data) {
 }
 
 // ================= INIT =================
-window.addEventListener("load", async () => {
-  buildBoard();
+document.addEventListener("DOMContentLoaded", async () => {
+  createMapFoundation(); // build the grid first
 
-  // Example: load all sheets in /map
-  const sheets = ["1_terrain.png", "2_indoors.png", "3_plants.png", "4_buildings.png", "5_waterfall.png", "7_grass_cliff.png", "11_roofs.png", "12_extra1.png", "13_extra2.png"];
-  await Promise.all(sheets.map(s => loadSpriteSheet(s, tileSize)));
+  // Load spritesheets
+  await Promise.all(Object.keys(sheetPalettes).map(name => loadSpriteSheet(name, tileSize)));
 
   // Fetch map JSON from server
-  const res = await fetch(`${SERVER_URL}${SERVER_PORT}/api/map/tiles`);
-  const mapData = await res.json();
-  renderMap(mapData);
+  const mapData = await fetchMap();
+  if (mapData) renderMap(mapData);
 });
