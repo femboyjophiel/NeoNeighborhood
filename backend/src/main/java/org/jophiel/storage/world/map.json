@@ -3397,7 +3397,7 @@
         "overlay": null
       },
       {
-        "tiles": "1_terrain.png_1_1",
+        "tiles": "1_terrain.png_10_1",
         "decor": "3_plants.png_3_0",
         "overlay": null
       }
@@ -5012,7 +5012,7 @@
         "overlay": null
       },
       {
-        "tiles": "1_terrain.png_1_1",
+        "tiles": "1_terrain.png_10_1",
         "decor": "3_plants.png_1_9",
         "overlay": null
       },
@@ -5184,5 +5184,7 @@
         "overlay": null
       }
     ]
-  ]
+  ],
+  "objects": [],
+  "tileSize": 20
 }

@@ -29,8 +29,6 @@ function buildBoard() {
       tile.className = "tile";
       tile.dataset.x = x;
       tile.dataset.y = y;
-      tile.style.width = tileSize + "px";
-      tile.style.height = tileSize + "px";
 
       layers.forEach(l => {
         const layerDiv = document.createElement("div");
