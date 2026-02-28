@@ -12,7 +12,7 @@ html, body, #root {
     scrollbar-width: none;
 }
 
-#land, #decor {
+#land {
     display: grid;
     grid-template-columns: repeat(32, 1fr);
     grid-template-rows: repeat(32, 1fr);
@@ -23,13 +23,8 @@ html, body, #root {
 
 }
 
-#decor {
-    display: inline-grid;
-    background: none;
-    opacity: 0;
-}
 
-#viewport, #land, #decor {
+#viewport, #land {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;  
@@ -41,19 +36,5 @@ html, body, #root {
 }
 
 #land > div {
-    border: 1px solid red;
-    box-sizing: border-box;
     aspect-ratio: 1/1;
-}
-
-.Plains {
-    background-color: lightgreen;
-}
-
-.Forest {
-    background-color: green;
-}
-
-.Road {
-    background-color: burlywood
 }

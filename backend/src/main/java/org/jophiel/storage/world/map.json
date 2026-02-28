@@ -1,68 +1,5187 @@
 {
-  "tiles": [
+  "grid": [
     [
       {
-        "type": "Forest",
-        "x": [
-          0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 0, 1, 2, 3, 14, 15,
-          0, 1, 14, 15, 0, 14, 15, 11, 12, 13, 14, 15, 10, 11, 12, 13, 10, 11,
-          0, 0, 1, 0, 1, 2, 0, 1, 2, 15, 0, 1, 15, 6, 14, 15, 4, 5, 6, 14, 15,
-          3, 4, 5, 13, 14, 15, 2, 3, 13, 14, 15
-        ],
-        "y": [
-          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2,
-          2, 2, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 7, 8, 8, 9, 9, 9, 10,
-          10, 10, 10, 11, 11, 11, 12, 12, 12, 13, 13, 13, 13, 13, 14, 14, 14,
-          14, 14, 14, 15, 15, 15, 15, 15
-        ]
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
       },
       {
-        "type": "Road",
-        "x": [
-          8, 7, 8, 6, 7, 5, 5, 6, 6, 7, 7, 8, 13, 14, 15, 7, 8, 9, 10, 11, 12,
-          13, 4, 5, 6, 7, 8, 3, 4, 8, 3, 8, 1, 2, 3, 8, 0, 1, 8, 0, 7, 8, 6, 7
-        ],
-        "y": [
-          0, 1, 1, 2, 2, 3, 4, 4, 5, 6, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 9,
-          9, 9, 9, 9, 10, 10, 10, 11, 11, 12, 12, 12, 12, 13, 13, 13, 14, 14,
-          14, 15, 15
-        ]
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
       },
       {
-        "type": "Plains",
-        "x": [
-          4, 5, 6, 9, 10, 11, 12, 2, 3, 4, 5, 9, 10, 11, 12, 13, 1, 2, 3, 4, 7,
-          8, 9, 10, 11, 12, 13, 0, 1, 2, 3, 7, 8, 9, 10, 0, 2, 3, 4, 5, 7, 8, 9,
-          14, 15, 0, 1, 2, 3, 4, 5, 8, 9, 12, 13, 15, 1, 2, 3, 4, 5, 6, 10, 11,
-          12, 2, 3, 4, 5, 6, 14, 15, 3, 10, 11, 12, 13, 14, 15, 5, 6, 9, 10, 11,
-          12, 13, 14, 2, 5, 6, 7, 9, 10, 11, 13, 14, 0, 4, 5, 7, 9, 10, 11, 12,
-          13, 2, 3, 7, 9, 10, 11, 12, 13, 1, 2, 6, 10, 11, 12, 1, 4, 8, 9, 10,
-          11, 12
-        ],
-        "y": [
-          1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3,
-          3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 6,
-          6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8,
-          8, 8, 8, 9, 9, 9, 9, 9, 9, 9, 10, 10, 10, 10, 10, 10, 10, 10, 11, 11,
-          11, 11, 11, 11, 11, 11, 11, 12, 12, 12, 12, 12, 12, 12, 12, 12, 13,
-          13, 13, 13, 13, 13, 13, 13, 14, 14, 14, 14, 14, 14, 15, 15, 15, 15,
-          15, 15, 15
-        ]
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
       },
       {
-        "type": "House",
-        "x": [13, 8, 6, 4, 1, 6, 14, 9, 9, 7, 4, 12, 9, 0, 5],
-        "y": [1, 2, 3, 4, 5, 6, 6, 7, 9, 10, 11, 11, 14, 15, 15]
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "11_roofs.png_8_10"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "11_roofs.png_8_1"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "11_roofs.png_7_4"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "11_roofs.png_8_5"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "11_roofs.png_8_12"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
       }
-    ]
-  ],
-
-  "decor": [
+    ],
     [
       {
-        "type": "Tree",
-        "x": [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15],
-        "y": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "11_roofs.png_8_10"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "11_roofs.png_8_1"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "11_roofs.png_9_10"
+      },
+      {
+        "tiles": "4_buildings.png_7_3",
+        "decor": null,
+        "overlay": "11_roofs.png_9_11"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "11_roofs.png_9_12"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "11_roofs.png_8_5"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "11_roofs.png_8_12"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "11_roofs.png_8_13"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_2_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_0_8",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "11_roofs.png_9_9"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "11_roofs.png_8_1"
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": null,
+        "overlay": "11_roofs.png_9_10"
+      },
+      {
+        "tiles": "4_buildings.png_7_3",
+        "decor": null,
+        "overlay": "11_roofs.png_10_10"
+      },
+      {
+        "tiles": "4_buildings.png_7_3",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_7_3",
+        "decor": null,
+        "overlay": "11_roofs.png_10_12"
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": null,
+        "overlay": "11_roofs.png_9_12"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "11_roofs.png_0_7",
+        "overlay": "11_roofs.png_8_5"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "11_roofs.png_9_13"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_0_0",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_12",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_0_10",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_0_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_6_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_6_6",
+        "overlay": null
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "11_roofs.png_8_0"
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": null,
+        "overlay": "11_roofs.png_9_10"
+      },
+      {
+        "tiles": "4_buildings.png_5_2",
+        "decor": null,
+        "overlay": "11_roofs.png_10_10"
+      },
+      {
+        "tiles": "4_buildings.png_7_3",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_7_3",
+        "decor": "2_indoors.png_10_2",
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_7_3",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_5_2",
+        "decor": null,
+        "overlay": "11_roofs.png_10_12"
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": null,
+        "overlay": "11_roofs.png_9_12"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "11_roofs.png_8_6"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_1_0",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_12",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_12",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_1_10",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_1_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_6_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_6_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_6_8",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_6",
+        "overlay": null
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "11_roofs.png_10_9"
+      },
+      {
+        "tiles": "4_buildings.png_7_2",
+        "decor": null,
+        "overlay": "11_roofs.png_10_10"
+      },
+      {
+        "tiles": "4_buildings.png_5_3",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_7_3",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_7_3",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_7_3",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_5_3",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_7_0",
+        "decor": null,
+        "overlay": "11_roofs.png_10_12"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "11_roofs.png_10_13"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_6_0",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_6_8",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_6",
+        "overlay": null
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_7_2",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_5_3",
+        "decor": "2_indoors.png_10_1",
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_6_0",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_0_8",
+        "decor": "4_buildings.png_6_1",
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_6_2",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_5_3",
+        "decor": "2_indoors.png_10_1",
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_7_0",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_3_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_3_14",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_3_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_3_10",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_3_14",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_3_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_3_10",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_3_11",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_9",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_8_6",
+        "overlay": null
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_8_2",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_5_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_8_0",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_1_8",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_8_2",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_5_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_8_0",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_3_2",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_2_4",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_2_4",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_4_1",
+        "decor": "3_plants.png_0_4",
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_4_1",
+        "decor": "3_plants.png_0_5",
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_4_1",
+        "decor": "3_plants.png_0_6",
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_4_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_2_5",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_1_5",
+        "decor": "1_terrain.png_11_0",
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_2_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_9",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_8_7",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_4_0",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_4_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_4_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_4_1",
+        "decor": "3_plants.png_1_4",
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_4_1",
+        "decor": "3_plants.png_1_5",
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_4_1",
+        "decor": "3_plants.png_1_6",
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_2_4",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_4_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_2_5",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_1_5",
+        "decor": "1_terrain.png_11_0",
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_3_11",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_7",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_1_9",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_2_10",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_3_13",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": "7_grass_cliff.png_3_14",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": "7_grass_cliff.png_3_10",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_3_1",
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_3_2",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_5_0",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_5_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_5_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_5_1",
+        "decor": "3_plants.png_2_4",
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_5_1",
+        "decor": "3_plants.png_2_5",
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_5_1",
+        "decor": "3_plants.png_2_6",
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_5_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_5_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_5_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_2_5",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_1_5",
+        "decor": "1_terrain.png_11_0",
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_3_11",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_7",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_1_4",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_4_1",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_4_1",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_4_1",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_4_2",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_4",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_3_5",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_2_5",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_1_5",
+        "decor": "1_terrain.png_11_0",
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_3_14",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_3_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_3_10",
+        "decor": "5_waterfall.png_9_0",
+        "overlay": "5_waterfall.png_4_3"
+      },
+      {
+        "tiles": "7_grass_cliff.png_3_10",
+        "decor": "1_terrain.png_7_6",
+        "overlay": "5_waterfall.png_4_4"
+      },
+      {
+        "tiles": "7_grass_cliff.png_3_1",
+        "decor": "1_terrain.png_7_7",
+        "overlay": "5_waterfall.png_4_5"
+      },
+      {
+        "tiles": "7_grass_cliff.png_3_10",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_3_14",
+        "decor": null,
+        "overlay": null
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_2_13",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_3_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_5_1",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_4_10",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_5_1",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_5_2",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_3_5",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_2_5",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_4_0",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_4_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_4_1",
+        "decor": "1_terrain.png_7_10",
+        "overlay": "5_waterfall.png_5_6"
+      },
+      {
+        "tiles": "7_grass_cliff.png_4_1",
+        "decor": "5_waterfall.png_5_7",
+        "overlay": "5_waterfall.png_5_7"
+      },
+      {
+        "tiles": "7_grass_cliff.png_4_1",
+        "decor": "1_terrain.png_7_12",
+        "overlay": "5_waterfall.png_5_8"
+      },
+      {
+        "tiles": "7_grass_cliff.png_4_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_4_1",
+        "decor": null,
+        "overlay": null
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_0_9",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_0_9",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_3_5",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_5_0",
+        "decor": "7_grass_cliff.png_5_1",
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_5_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_5_1",
+        "decor": "5_waterfall.png_9_0",
+        "overlay": "5_waterfall.png_5_0"
+      },
+      {
+        "tiles": "7_grass_cliff.png_5_1",
+        "decor": "5_waterfall.png_9_1",
+        "overlay": "5_waterfall.png_5_1"
+      },
+      {
+        "tiles": "7_grass_cliff.png_5_1",
+        "decor": "5_waterfall.png_9_2",
+        "overlay": "5_waterfall.png_5_2"
+      },
+      {
+        "tiles": "7_grass_cliff.png_5_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "7_grass_cliff.png_5_1",
+        "decor": null,
+        "overlay": null
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": "7_grass_cliff.png_3_1",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_3_10",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": "7_grass_cliff.png_3_1",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_3_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_3_13",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_3_14",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_3_15",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_5",
+        "overlay": "5_waterfall.png_6_0"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "5_waterfall.png_6_1"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_6_4",
+        "overlay": "5_waterfall.png_6_2"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "1_terrain.png_6_2"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_1_9",
+        "overlay": null
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_5_1",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_5_1",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_5_1",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_4_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_4_13",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_4_14",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_4_15",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "11_roofs.png_1_10"
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": null,
+        "overlay": "11_roofs.png_4_6"
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": null,
+        "overlay": "11_roofs.png_4_7"
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": null,
+        "overlay": "11_roofs.png_4_7"
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": null,
+        "overlay": "11_roofs.png_4_7"
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": null,
+        "overlay": "11_roofs.png_4_8"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "11_roofs.png_1_12"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "1_terrain.png_8_0"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "1_terrain.png_7_3"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "1_terrain.png_7_6"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "1_terrain.png_6_4"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "1_terrain.png_6_2"
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_5_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "7_grass_cliff.png_5_13",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "11_roofs.png_2_9"
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": null,
+        "overlay": "11_roofs.png_1_3"
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": null,
+        "overlay": "11_roofs.png_6_6"
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": null,
+        "overlay": "11_roofs.png_4_0"
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": null,
+        "overlay": "11_roofs.png_5_7"
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": null,
+        "overlay": "11_roofs.png_4_1"
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": null,
+        "overlay": "11_roofs.png_6_8"
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": null,
+        "overlay": "11_roofs.png_1_5"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "11_roofs.png_2_13"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "1_terrain.png_7_5"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "1_terrain.png_7_6"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "1_terrain.png_7_6"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "1_terrain.png_6_4"
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_0_1",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_0_2",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_0_3",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_0",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_0",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "12_extra1.png_6_2",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "12_extra1.png_7_3",
+        "overlay": "11_roofs.png_2_2"
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": null,
+        "overlay": "11_roofs.png_2_3"
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": null,
+        "overlay": "11_roofs.png_2_4"
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": null,
+        "overlay": "11_roofs.png_2_4"
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": null,
+        "overlay": "11_roofs.png_2_4"
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": null,
+        "overlay": "11_roofs.png_2_4"
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": null,
+        "overlay": "11_roofs.png_2_4"
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": null,
+        "overlay": "11_roofs.png_2_5"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "12_extra1.png_7_3",
+        "overlay": "11_roofs.png_2_6"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "12_extra1.png_6_4",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_12",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "1_terrain.png_7_5"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_2_0",
+        "overlay": "1_terrain.png_7_6"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "1_terrain.png_7_6"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "1_terrain.png_7_6"
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_1_1",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_1_2",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_1_3",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_0",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_0",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "12_extra1.png_5_4",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "11_roofs.png_3_2"
+      },
+      {
+        "tiles": "4_buildings.png_7_2",
+        "decor": null,
+        "overlay": "11_roofs.png_3_4"
+      },
+      {
+        "tiles": "4_buildings.png_7_3",
+        "decor": null,
+        "overlay": "11_roofs.png_3_5"
+      },
+      {
+        "tiles": "4_buildings.png_6_0",
+        "decor": null,
+        "overlay": "11_roofs.png_3_3"
+      },
+      {
+        "tiles": "4_buildings.png_0_8",
+        "decor": "4_buildings.png_6_1",
+        "overlay": "11_roofs.png_3_4"
+      },
+      {
+        "tiles": "4_buildings.png_6_2",
+        "decor": null,
+        "overlay": "11_roofs.png_3_3"
+      },
+      {
+        "tiles": "4_buildings.png_7_3",
+        "decor": null,
+        "overlay": "11_roofs.png_3_4"
+      },
+      {
+        "tiles": "4_buildings.png_7_0",
+        "decor": null,
+        "overlay": "11_roofs.png_3_4"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "11_roofs.png_3_6"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "12_extra1.png_5_4",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_2_12",
+        "overlay": "1_terrain.png_8_5"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "1_terrain.png_7_8"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "1_terrain.png_7_6"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "1_terrain.png_7_6"
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_2_1",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_2_2",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_2_3",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "12_extra1.png_5_4",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_0_12",
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_8_2",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_8_3",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_8_0",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_1_8",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_8_2",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_8_3",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "4_buildings.png_8_0",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "12_extra1.png_5_4",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_2_12",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "1_terrain.png_8_5"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "1_terrain.png_8_6"
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": "1_terrain.png_8_6"
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_1",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_2",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_3",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "12_extra1.png_5_4",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_0_12",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_7",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_0_12",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "12_extra1.png_5_4",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "12_extra1.png_7_2",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "12_extra1.png_7_3",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "12_extra1.png_7_3",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "12_extra1.png_7_4",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_7",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "12_extra1.png_7_2",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "12_extra1.png_7_3",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "12_extra1.png_7_3",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "12_extra1.png_7_4",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_0",
+        "overlay": null
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_7",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_0",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": "3_plants.png_3_0",
+        "overlay": null
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "2_indoors.png_3_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "2_indoors.png_3_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "2_indoors.png_3_7",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_9_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_9",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_7",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_2_8",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_2_9",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "2_indoors.png_4_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "2_indoors.png_4_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "2_indoors.png_4_7",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_0_9",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_9_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_9",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_7",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_8",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_9",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_0_1",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_0_2",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_0_3",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_9_8",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_11_7",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_0_4",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_0_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_0_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_1_1",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_1_2",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_1_3",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_9_8",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_11_7",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_1_4",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_1_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_1_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_1_12",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_2_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_2_1",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_2_2",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_2_3",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_7",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_1_8",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_2_4",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_2_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_2_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_2_12",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_6_0",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_6_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_6_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_6_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_6_2",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_1",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_2",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_3",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_7",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_4",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_12",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_6_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_6_8",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_1",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_1",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_7",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_2_10",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_7",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_2_12",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_0",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_1",
+        "overlay": null
+      },
+      {
+        "tiles": null,
+        "decor": "1_terrain.png_4_6",
+        "overlay": null
+      },
+      {
+        "tiles": null,
+        "decor": "1_terrain.png_7_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_1",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_7",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_9_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_9_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_9_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_9_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_9_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_9",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_7",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_3_12",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_0",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_1",
+        "overlay": null
+      },
+      {
+        "tiles": null,
+        "decor": "1_terrain.png_7_1",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_1",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_7_14",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_8_12",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": "1_terrain.png_10_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": "1_terrain.png_10_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_7",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_9_10",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_9_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_9_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_9_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_9_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_9_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_9_12",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_8_0",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_8_1",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_8_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_8_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_8_12",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_9_8",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_11_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_11_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_11_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_11_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_11_7",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "3_plants.png_0_9",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_10",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_11",
+        "decor": "3_plants.png_0_12",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_11",
+        "decor": "3_plants.png_0_13",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_11",
+        "decor": "3_plants.png_1_13",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_11",
+        "decor": "3_plants.png_1_13",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_11",
+        "decor": "3_plants.png_0_13",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_12",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_1_1",
+        "decor": "3_plants.png_1_9",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      }
+    ],
+    [
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_5",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_6",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_10_7",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_11_10",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_11_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_11_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_11_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_11_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_11_11",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": "1_terrain.png_11_12",
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
+      },
+      {
+        "tiles": "1_terrain.png_10_1",
+        "decor": null,
+        "overlay": null
       }
     ]
   ]

@@ -1,184 +1,108 @@
-const SERVER_URL = "http://localhost"//"https://neoneighborhood.jophiel.org";
-const SERVER_PORT = ":8080";
+// ================= CONFIG =================
+const BOARD_SIZE = 32;
+let tileSize = 20;
+const layers = ["tiles", "decor", "overlay"];
+let grid = [];
 
-const MAP_LENGTHX = 32;
-const MAP_LENGTHY = 32;
-
-let defaultTile = "Plains";
+// DOM
 const land = document.getElementById("land");
 
-// Gets map.json in its entirety
-function fetchMap() {
-return fetch (`${SERVER_URL}${SERVER_PORT}/api/map/tiles`) 
-    .then(response => {
-        if (!response.ok) throw new Error(response.statusText);
-        return response.json();
-    })
+// Spritesheets loaded from /map
+const sheetPalettes = {}; // { sheetName: [{name, url, div}, ...] }
 
-    .then(data => data.tiles);
-}
+// ================= BOARD =================
+function buildBoard() {
+  land.innerHTML = "";
+  land.style.gridTemplateColumns = `repeat(${BOARD_SIZE}, ${tileSize}px)`;
+  land.style.gridTemplateRows = `repeat(${BOARD_SIZE}, ${tileSize}px)`;
 
-function applyDefault(type) {
-    for (const tile of land.children) {
-        tile.classList.add(type);
+  for (let y = 0; y < BOARD_SIZE; y++) {
+    grid[y] = [];
+
+    for (let x = 0; x < BOARD_SIZE; x++) {
+      grid[y][x] = { tiles: null, decor: null, overlay: null };
+
+      const tile = document.createElement("div");
+      tile.className = "tile";
+      tile.dataset.x = x;
+      tile.dataset.y = y;
+      tile.style.width = tileSize + "px";
+      tile.style.height = tileSize + "px";
+
+      layers.forEach(l => {
+        const layerDiv = document.createElement("div");
+        layerDiv.className = `layer ${l}`;
+        tile.appendChild(layerDiv);
+      });
+
+      land.appendChild(tile);
     }
+  }
 }
 
-function renderMap(map) {
-    map[0].forEach(tileSet => {
-        console.log(tileSet)
-        for (let x =0; x < tileSet.x.length; x++) {
-            document.getElementById((tileSet.x[x]) + (tileSet.y[x]*16)).classList.remove(defaultTile);
-            document.getElementById((tileSet.x[x]) + (tileSet.y[x]*16)).classList.add(tileSet.type);
+// ================= LOAD SPRITES =================
+async function loadSpriteSheet(name, sizePx) {
+  return new Promise(resolve => {
+    const img = new Image();
+    img.src = `resources/map/${name}`; // your spritesheet path
+    img.onload = () => {
+      const cols = Math.floor(img.width / sizePx);
+      const rows = Math.floor(img.height / sizePx);
+      const tiles = [];
+
+      const canvas = document.createElement("canvas");
+      canvas.width = sizePx;
+      canvas.height = sizePx;
+      const ctx = canvas.getContext("2d");
+
+      for (let y = 0; y < rows; y++) {
+        for (let x = 0; x < cols; x++) {
+          ctx.clearRect(0, 0, sizePx, sizePx);
+          ctx.drawImage(img, x * sizePx, y * sizePx, sizePx, sizePx, 0, 0, sizePx, sizePx);
+          const url = canvas.toDataURL();
+          const tileName = `${name}_${y}_${x}`;
+          tiles.push({ name: tileName, url });
         }
+      }
+
+      sheetPalettes[name] = tiles;
+      resolve();
+    };
+  });
+}
+
+// ================= RENDER MAP =================
+function renderMap(data) {
+  if (!data || !Array.isArray(data.grid)) return;
+
+  data.grid.forEach((row, y) => {
+    row.forEach((cell, x) => {
+      layers.forEach(l => {
+        if (!cell[l]) return;
+
+        const tile = document.querySelector(`.tile[data-x="${x}"][data-y="${y}"]`);
+        const layerDiv = tile.querySelector(`.${l}`);
+
+        // Find sliced sprite by name
+        const sheetTile = Object.values(sheetPalettes).flat().find(t => t.name === cell[l]);
+        if (sheetTile) layerDiv.style.backgroundImage = `url(${sheetTile.url})`;
+
+        grid[y][x][l] = cell[l];
+      });
+    });
+  });
+}
+
+// ================= INIT =================
+window.addEventListener("load", async () => {
+  buildBoard();
+
+  // Example: load all sheets in /map
+  const sheets = ["1_terrain.png", "2_indoors.png", "3_plants.png", "4_buildings.png", "5_waterfall.png", "7_grass_cliff.png", "11_roofs.png", "12_extra1.png", "13_extra2.png"];
+  await Promise.all(sheets.map(s => loadSpriteSheet(s, tileSize)));
+
+  // Fetch map JSON from server
+  const res = await fetch(`${SERVER_URL}${SERVER_PORT}/api/map/tiles`);
+  const mapData = await res.json();
+  renderMap(mapData);
 });
-}
-
-// This funciton creates the grid that tiles will placed on
-// It is seperate from render because creating a ton of elements is expensive on older browsers
-function createMapFoundation() {
-    for (let x = 0; x < MAP_LENGTHX * MAP_LENGTHY; x++) {
-            let div = document.createElement("div");
-            div.classList.add(`x:${x%MAP_LENGTHX}`, `y:${Math.floor(x/MAP_LENGTHY)}`); //Add x and y seperately so rows/columns can be altered if need. (doesn do anything currently)
-            div.id = x; //This will be used most often to target tiles specifically
-            decor.appendChild(div);
-            land.appendChild(div)
-            
-    }
-}
-
-function register() {
-    let rusername = document.getElementById("register-username").value;
-    let rpassword = document.getElementById("register-password").value;
-
-fetch(`${SERVER_URL}${SERVER_PORT}/api/user/register`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ username: rusername, password: rpassword })
-})
-.then(response => {
-    if (!response.ok) throw new Error(response.statusText);
-    return response.json();
-})
-.then(data => {
-    console.log("Successfully registered:", data)
-    login(rusername, rpassword);
-})
-.catch(err => console.error("Registration error:", err));
-}
-
-function login(username, password) {
-    let lusername; 
-    let lpassword;
-
-    if (username && password) {
-        lusername = username;
-        lpassword = password;
-    } else {
-        lusername = document.getElementById("login-username").value;
-        lpassword = document.getElementById("login-password").value;
-    }
-
-fetch(`${SERVER_URL}${SERVER_PORT}/api/user/login`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ username: lusername, password: lpassword })
-})
-.then(response => {
-    if (!response.ok) throw new Error(response.statusText);
-    return response.json();
-})
-.then(data => console.log("Successfully logged in:", data))
-.catch(err => console.error("Login error:", err));
-}
-
-
-createMapFoundation();
-applyDefault(defaultTile);
-fetchMap().then(map => {
-    renderMap(map);
-});
-
-
-
-
-
-const viewport = document.getElementById("viewport");
-
-let isDown = false;
-let startX;
-let startY;
-let scrollLeft;
-let scrollTop;
-let scale = 1;
-
-// ---------- DRAG ----------
-function stopDrag() {
-    isDown = false;
-    viewport.classList.remove("dragging");
-}
-
-viewport.addEventListener("pointerdown", (e) => {
-    isDown = true;
-    viewport.classList.add("dragging");
-
-    startX = e.clientX;
-    startY = e.clientY;
-
-    scrollLeft = viewport.scrollLeft;
-    scrollTop = viewport.scrollTop;
-
-    viewport.setPointerCapture(e.pointerId);
-});
-
-viewport.addEventListener("pointermove", (e) => {
-    if (!isDown) return;
-
-    const dx = e.clientX - startX;
-    const dy = e.clientY - startY;
-
-    viewport.scrollLeft = scrollLeft - dx;
-    viewport.scrollTop = scrollTop - dy;
-});
-
-viewport.addEventListener("pointerup", stopDrag);
-viewport.addEventListener("pointercancel", stopDrag);
-viewport.addEventListener("lostpointercapture", stopDrag);
-viewport.addEventListener("pointerleave", stopDrag);
-
-land.addEventListener("dragstart", (e) => e.preventDefault());
-
-// ---------- ZOOM ----------
-viewport.addEventListener("wheel", (e) => {
-    e.preventDefault();
-
-    const zoomIntensity = 0.0015;
-    const delta = -e.deltaY * zoomIntensity;
-
-    const rect = viewport.getBoundingClientRect();
-
-    const mouseX = e.clientX - rect.left;
-    const mouseY = e.clientY - rect.top;
-
-    const contentX = (viewport.scrollLeft + mouseX) / scale;
-    const contentY = (viewport.scrollTop + mouseY) / scale;
-
-    scale = Math.min(Math.max(0.5, scale + delta), 3);
-
-    land.style.transformOrigin = "top left";
-    land.style.transform = `scale(${scale})`;
-
-    viewport.scrollLeft = contentX * scale - mouseX;
-    viewport.scrollTop = contentY * scale - mouseY;
-}, { passive: false });
-
-function centerBoard() {
-    const x = (land.scrollWidth * scale - viewport.clientWidth) / 2;
-    const y = (land.scrollHeight * scale - viewport.clientHeight) / 2;
-
-    viewport.scrollLeft = x;
-    viewport.scrollTop = y;
-}
-
-// wait for layout
-window.addEventListener("load", centerBoard);
