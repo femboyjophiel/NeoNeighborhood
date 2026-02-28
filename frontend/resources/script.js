@@ -1,19 +1,19 @@
 SERVER_URL = "https://neoneighborhood.jophiel.org";
 SERVER_PORT = "";
 
-// ================= CONFIG =================
+
 const BOARD_SIZE = 32;
 let tileSize = 32;
 const layers = ["tiles", "decor", "overlay"];
 let grid = [];
 
-// DOM
+
 const land = document.getElementById("land");
 
-// Spritesheets loaded from /map
-const sheetPalettes = {}; // { sheetName: [{name, url, div}, ...] }
 
-// ================= BOARD =================
+const sheetPalettes = {}; 
+
+
 function buildBoard() {
   land.innerHTML = "";
   land.style.gridTemplateColumns = `repeat(${BOARD_SIZE}, ${tileSize}px)`;
@@ -43,7 +43,7 @@ function buildBoard() {
   }
 }
 
-// ================= LOAD SPRITES =================
+
 function loadSpriteSheet(sheetName, sizePx) {
   return new Promise(resolve => {
     const img = new Image();
@@ -62,7 +62,6 @@ function loadSpriteSheet(sheetName, sizePx) {
           ctx.drawImage(img, x * sizePx, y * sizePx, sizePx, sizePx, 0, 0, sizePx, sizePx);
           const url = canvas.toDataURL();
           
-          // generate the exact same name format your JSON uses
           const tileName = `${sheetName}_${y}_${x}`; 
           tiles.push({ name: tileName, url });
         }
@@ -74,7 +73,6 @@ function loadSpriteSheet(sheetName, sizePx) {
   });
 }
 
-// ================= RENDER MAP =================
 function renderMap(data) {
   data.grid.forEach((row, y) => {
     row.forEach((cell, x) => {
@@ -85,7 +83,6 @@ function renderMap(data) {
         const tileDiv = document.querySelector(`.tile[data-x="${x}"][data-y="${y}"]`);
         const layerDiv = tileDiv.querySelector(`.${l}`);
 
-        // Look up the sliced sprite by exact JSON name
         const sheetTile = Object.values(sheetPalettes).flat()
           .find(t => t.name === tileValue);
 
@@ -97,14 +94,14 @@ function renderMap(data) {
   });
 }
 
-// ================= INIT =================
+
 document.addEventListener("DOMContentLoaded", async () => {
-  buildBoard(); // build the grid first
+  buildBoard();
 
-  // Load spritesheets
-  await Promise.all(Object.keys(sheetPalettes).map(name => loadSpriteSheet(name, tileSize)));
+  const sheets = ["1_terrain.png", "2_indoors.png", "3_plants.png", "4_buildings.png", "5_waterfall.png", "7_grass_cliff.png", "11_roofs.png", "12_extra1.png", "13_extra2.png"];
+  await Promise.all(sheets.map(s => loadSpriteSheet(s, tileSize)));
 
-  // Fetch map JSON from server
-  const mapData = await fetchMap();
-  if (mapData) renderMap(mapData);
+  const res = await fetch(`${SERVER_URL}${SERVER_PORT}/api/map/tiles`);
+  const mapData = await res.json();
+  renderMap(mapData);
 });
