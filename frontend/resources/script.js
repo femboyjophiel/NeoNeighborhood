@@ -1,3 +1,6 @@
+SERVER_URL = "https://neoneighborhood.jophiel.org";
+SERVER_PORT = "";
+
 // ================= CONFIG =================
 const BOARD_SIZE = 32;
 let tileSize = 20;
