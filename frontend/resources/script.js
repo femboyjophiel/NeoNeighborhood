@@ -16,8 +16,6 @@ const sheetPalettes = {};
 
 function buildBoard() {
   land.innerHTML = "";
-  land.style.gridTemplateColumns = `repeat(${BOARD_SIZE}, ${tileSize}px)`;
-  land.style.gridTemplateRows = `repeat(${BOARD_SIZE}, ${tileSize}px)`;
 
   for (let y = 0; y < BOARD_SIZE; y++) {
     grid[y] = [];
