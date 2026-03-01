@@ -136,3 +136,59 @@ viewport.addEventListener("pointerleave", stopDrag);
 
 // prevent native drag behavior
 land.addEventListener("dragstart", e => e.preventDefault());
+
+function register() {
+    let rusername = document.getElementById("register-username").value;
+    let rpassword = document.getElementById("register-password").value;
+
+fetch(`${SERVER_URL}${SERVER_PORT}/api/user/register`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ username: rusername, password: rpassword })
+})
+.then(response => {
+    if (!response.ok) throw new Error(response.statusText);
+    return response.json();
+})
+.then(data => {
+    console.log("Successfully registered:", data)
+    login(rusername, rpassword);
+})
+.catch(err => console.error("Registration error:", err));
+}
+
+function login(username, password) {
+    let lusername; 
+    let lpassword;
+
+    if (username && password) {
+        lusername = username;
+        lpassword = password;
+    } else {
+        lusername = document.getElementById("login-username").value;
+        lpassword = document.getElementById("login-password").value;
+    }
+
+fetch(`${SERVER_URL}${SERVER_PORT}/api/user/login`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ username: lusername, password: lpassword })
+})
+.then(response => {
+    if (!response.ok) throw new Error(response.statusText);
+    return response.json();
+})
+.then(data => console.log("Successfully logged in:", data))
+.catch(err => console.error("Login error:", err));
+}
+
+function requestPlot(user) {
+    fetch(`${SERVER_URL}${SERVER_PORT}/api/plot/request`, {
+});
+
+const modal = document.getElementById("welcomeModal");
+const closeBtn = document.getElementById("closeModal");
+
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+});
