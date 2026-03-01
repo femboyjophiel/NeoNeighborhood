@@ -182,9 +182,6 @@ fetch(`${SERVER_URL}${SERVER_PORT}/api/user/login`, {
 .catch(err => console.error("Login error:", err));
 }
 
-function requestPlot(user) {
-    fetch(`${SERVER_URL}${SERVER_PORT}/api/plot/request`, {
-});
 
 const modal = document.getElementById("welcomeModal");
 const closeBtn = document.getElementById("closeModal");
