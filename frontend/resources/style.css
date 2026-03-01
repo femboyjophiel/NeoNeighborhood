@@ -22,8 +22,8 @@ html, body, #root {
 
 #land {
     display: grid;
-    grid-template-columns: repeat(32, 32px); /* tile size via CSS */
-    grid-template-rows: repeat(32, 32px);
+    grid-template-columns: repeat(32, 64px); 
+    grid-template-rows: repeat(32, 64px);
     transform-origin: top left;
     will-change: transform;
 }
@@ -38,8 +38,8 @@ html, body, #root {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 200%;
+    height: 200%;
     background-size: cover;
     background-repeat: no-repeat;
 }
