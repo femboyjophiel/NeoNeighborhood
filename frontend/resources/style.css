@@ -9,20 +9,29 @@ html, body, #root {
     width: 100%;
     overflow: auto;
     cursor: grab;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    touch-action: none;
+    scrollbar-width: none;
+}
+
+#viewport.dragging {
+    cursor: grabbing;
 }
 
 #land {
     display: grid;
-    grid-template-columns: repeat(32, 1fr);
-    grid-template-rows: repeat(32, 1fr);
-    height: 200%;
-    width: 200%;
+    grid-template-columns: repeat(32, 32px); /* tile size via CSS */
+    grid-template-rows: repeat(32, 32px);
     transform-origin: top left;
     will-change: transform;
 }
 
 .tile {
     position: relative;
+    width: 32px;
+    height: 32px;
 }
 
 .tile .layer {
@@ -33,17 +42,4 @@ html, body, #root {
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    aspect-ratio: 1 / 1;
-}
-
-#viewport, #land {
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    touch-action: none;      
-}
-
-#viewport.dragging {
-    cursor: grabbing;
 }

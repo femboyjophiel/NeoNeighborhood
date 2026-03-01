@@ -101,3 +101,38 @@ document.addEventListener("DOMContentLoaded", async () => {
   const mapData = await res.json();
   renderMap(mapData);
 });
+
+const viewport = document.getElementById("viewport");
+let isDown = false;
+let startX, startY, scrollLeft, scrollTop;
+
+viewport.addEventListener("pointerdown", e => {
+    isDown = true;
+    viewport.classList.add("dragging");
+    startX = e.clientX;
+    startY = e.clientY;
+    scrollLeft = viewport.scrollLeft;
+    scrollTop = viewport.scrollTop;
+    viewport.setPointerCapture(e.pointerId);
+});
+
+viewport.addEventListener("pointermove", e => {
+    if (!isDown) return;
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+    viewport.scrollLeft = scrollLeft - dx;
+    viewport.scrollTop = scrollTop - dy;
+});
+
+function stopDrag(e) {
+    isDown = false;
+    viewport.classList.remove("dragging");
+}
+
+viewport.addEventListener("pointerup", stopDrag);
+viewport.addEventListener("pointercancel", stopDrag);
+viewport.addEventListener("lostpointercapture", stopDrag);
+viewport.addEventListener("pointerleave", stopDrag);
+
+// prevent native drag behavior
+land.addEventListener("dragstart", e => e.preventDefault());
