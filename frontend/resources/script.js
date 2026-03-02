@@ -1,4 +1,4 @@
-SERVER_URL = "http://localhost:8080"//"https://neoneighborhood.jophiel.org";
+SERVER_URL = "https://neoneighborhood.jophiel.org";
 
 const land = document.getElementById("land");
 
