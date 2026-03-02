@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 
 public class UserServices {
 
-    private static final String usersPath = "backend/src/main/java/org/jophiel/storage/users";
+    private static final String usersPath = "src/main/java/org/jophiel/storage/users";
 
     public static String getUser(String username) {
         Path infoPath = Paths.get(usersPath, username, "info.json");
