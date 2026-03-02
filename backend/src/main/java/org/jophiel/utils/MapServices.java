@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class MapServices {
 
-    private static final String MAP_FILE = "backend/src/main/java/org/jophiel/storage/world/map.json";
+    private static final String MAP_FILE = "src/main/java/org/jophiel/storage/world/map.json";
 
     public static String getMapData() {
         try {
