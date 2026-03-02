@@ -1,138 +1,7 @@
-SERVER_URL = "https://neoneighborhood.jophiel.org";
-SERVER_PORT = "";
-
-
-const BOARD_SIZE = 32;
-let tileSize = 32;
-const layers = ["tiles", "decor", "overlay"];
-let grid = [];
-
+SERVER_URL = "http://localhost:8080"//"https://neoneighborhood.jophiel.org";
 
 const land = document.getElementById("land");
 
-
-const sheetPalettes = {}; 
-
-
-function buildBoard() {
-  land.innerHTML = "";
-
-  for (let y = 0; y < BOARD_SIZE; y++) {
-    grid[y] = [];
-
-    for (let x = 0; x < BOARD_SIZE; x++) {
-      grid[y][x] = { tiles: null, decor: null, overlay: null };
-
-      const tile = document.createElement("div");
-      tile.className = "tile";
-      tile.dataset.x = x;
-      tile.dataset.y = y;
-
-      layers.forEach(l => {
-        const layerDiv = document.createElement("div");
-        layerDiv.className = `layer ${l}`;
-        tile.appendChild(layerDiv);
-      });
-
-      land.appendChild(tile);
-    }
-  }
-}
-
-
-function loadSpriteSheet(sheetName, sizePx) {
-  return new Promise(resolve => {
-    const img = new Image();
-    img.src = `resources/map/${sheetName}`;
-    img.onload = () => {
-      const cols = Math.floor(img.width / sizePx);
-      const rows = Math.floor(img.height / sizePx);
-      const tiles = [];
-      const canvas = document.createElement("canvas");
-      canvas.width = canvas.height = sizePx;
-      const ctx = canvas.getContext("2d");
-
-      for (let y = 0; y < rows; y++) {
-        for (let x = 0; x < cols; x++) {
-          ctx.clearRect(0, 0, sizePx, sizePx);
-          ctx.drawImage(img, x * sizePx, y * sizePx, sizePx, sizePx, 0, 0, sizePx, sizePx);
-          const url = canvas.toDataURL();
-          
-          const tileName = `${sheetName}_${y}_${x}`; 
-          tiles.push({ name: tileName, url });
-        }
-      }
-
-      sheetPalettes[sheetName] = tiles;
-      resolve();
-    };
-  });
-}
-
-function renderMap(data) {
-  data.grid.forEach((row, y) => {
-    row.forEach((cell, x) => {
-      layers.forEach(l => {
-        const tileValue = cell[l];
-        if (!tileValue) return;
-
-        const tileDiv = document.querySelector(`.tile[data-x="${x}"][data-y="${y}"]`);
-        const layerDiv = tileDiv.querySelector(`.${l}`);
-
-        const sheetTile = Object.values(sheetPalettes).flat()
-          .find(t => t.name === tileValue);
-
-        if (sheetTile) {
-          layerDiv.style.backgroundImage = `url(${sheetTile.url})`;
-        }
-      });
-    });
-  });
-}
-
-
-document.addEventListener("DOMContentLoaded", async () => {
-  buildBoard();
-
-  const sheets = ["1_terrain.png", "2_indoors.png", "3_plants.png", "4_buildings.png", "5_waterfall.png", "7_grass_cliff.png", "11_roofs.png", "12_extra1.png", "13_extra2.png"];
-  await Promise.all(sheets.map(s => loadSpriteSheet(s, tileSize)));
-
-  const res = await fetch(`${SERVER_URL}${SERVER_PORT}/api/map/tiles`);
-  const mapData = await res.json();
-  renderMap(mapData);
-});
-
-const viewport = document.getElementById("viewport");
-let isDown = false;
-let startX, startY, scrollLeft, scrollTop;
-
-viewport.addEventListener("pointerdown", e => {
-    isDown = true;
-    viewport.classList.add("dragging");
-    startX = e.clientX;
-    startY = e.clientY;
-    scrollLeft = viewport.scrollLeft;
-    scrollTop = viewport.scrollTop;
-    viewport.setPointerCapture(e.pointerId);
-});
-
-viewport.addEventListener("pointermove", e => {
-    if (!isDown) return;
-    const dx = e.clientX - startX;
-    const dy = e.clientY - startY;
-    viewport.scrollLeft = scrollLeft - dx;
-    viewport.scrollTop = scrollTop - dy;
-});
-
-function stopDrag(e) {
-    isDown = false;
-    viewport.classList.remove("dragging");
-}
-
-viewport.addEventListener("pointerup", stopDrag);
-viewport.addEventListener("pointercancel", stopDrag);
-viewport.addEventListener("lostpointercapture", stopDrag);
-viewport.addEventListener("pointerleave", stopDrag);
 
 // prevent native drag behavior
 land.addEventListener("dragstart", e => e.preventDefault());
@@ -141,7 +10,7 @@ function register() {
     let rusername = document.getElementById("register-username").value;
     let rpassword = document.getElementById("register-password").value;
 
-fetch(`${SERVER_URL}${SERVER_PORT}/api/user/register`, {
+fetch(`${SERVER_URL}/api/user/register`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ username: rusername, password: rpassword })
@@ -169,7 +38,7 @@ function login(username, password) {
         lpassword = document.getElementById("login-password").value;
     }
 
-fetch(`${SERVER_URL}${SERVER_PORT}/api/user/login`, {
+fetch(`${SERVER_URL}/api/user/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ username: lusername, password: lpassword })
@@ -189,3 +58,72 @@ const closeBtn = document.getElementById("closeModal");
 closeBtn.addEventListener("click", () => {
   modal.style.display = "none";
 });
+
+async function fetchPlotById(id) {
+  try {
+    const url = `${SERVER_URL}/api/plot/plotdata?id=${id}`;
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(`Error fetching plot: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log("Plot data:", data);
+    return data;
+
+  } catch (err) {
+    console.error(err);
+    return null;
+  }
+}
+
+async function openUserModal(id) {
+  try {
+    const plot = await fetchPlotById(id);
+
+    // Default "empty plot" user
+    const defaultUser = {
+      displayName: 'Knock Knock',
+      about: 'Who\'s there? <br> No one! But in the future, it could be you! :)',
+      portrait: null,
+      website: null
+    };
+
+    // Use the plot's user if available, otherwise default
+    let user = defaultUser;
+
+    if (plot && plot.userInfo && Object.keys(plot.userInfo).length > 0) {
+      const userId = Object.keys(plot.userInfo)[0];
+      user = plot.userInfo[userId];
+    }
+
+    const overlay = document.createElement("div");
+    overlay.className = "user-modal-overlay";
+
+    const modal = document.createElement("div");
+    modal.className = "user-modal";
+
+    modal.innerHTML = `
+      ${user.portrait ? `<img src="${user.portrait}" alt="${user.displayName}">` : ''}
+      <h2>${user.displayName}</h2>
+      <p>${user.about}</p>
+      ${user.website ? `<p>Website: <a href="https://${user.website}" target="_blank">${user.website}</a></p>` : ''}
+      <button class="user-close-btn">Close</button>
+    `;
+
+    overlay.appendChild(modal);
+    document.body.appendChild(overlay);
+
+    // Close button
+    modal.querySelector(".user-close-btn").addEventListener("click", () => overlay.remove());
+
+    // Click outside modal closes it
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) overlay.remove();
+    });
+
+  } catch (err) {
+    console.error("Failed to open user modal:", err);
+  }
+}

@@ -4,13 +4,16 @@ import org.jophiel.http.Router;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import java.io.IOException;
+import java.net.URI;
 import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
+import java.util.Map;
 
 public abstract class AbstractApi {
     
     protected final Router router;
 
-    private final String SITE = "*"; //"http://127.0.0.1:3000";
+    private final String SITE = "*";
 
     protected AbstractApi(Router router) {
         this.router = router;
@@ -62,17 +65,34 @@ public abstract class AbstractApi {
     protected void crossOrigin(HttpExchange exchange) throws IOException {
         exchange.getResponseHeaders().set("Access-Control-Allow-Origin", SITE);
         exchange.getResponseHeaders().set("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-        exchange.getResponseHeaders().set("Access-Control-Allow-Headers", "Authorization, Content-Type");
+        exchange.getResponseHeaders().set("Access-Control-Allow-Headers", "Authorization, Content-Type, X-Requested-With");
+        exchange.getResponseHeaders().set("Access-Control-Max-Age", "86400");
     }
     
 
     protected void preflight(HttpExchange exchange) throws IOException {
         crossOrigin(exchange);
-        exchange.sendResponseHeaders(200, 0); // zero-length body
-        try (var os = exchange.getResponseBody()) {
-            os.write(new byte[0]);
-            os.flush();
+        exchange.sendResponseHeaders(204, -1); 
+        exchange.close();
+    }
+
+    protected Map<String, String> parseQuery(HttpExchange exchange) {
+    Map<String, String> queryPairs = new HashMap<>();
+    URI uri = exchange.getRequestURI();
+    String query = uri.getQuery();
+    if (query == null || query.isEmpty()) return queryPairs;
+
+    String[] pairs = query.split("&");
+    for (String pair : pairs) {
+        int idx = pair.indexOf("=");
+        if (idx > 0 && idx < pair.length() - 1) {
+            queryPairs.put(
+                pair.substring(0, idx),
+                pair.substring(idx + 1)
+            );
         }
+    }
+    return queryPairs;
     }
 
 }

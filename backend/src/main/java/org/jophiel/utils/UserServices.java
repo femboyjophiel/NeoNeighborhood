@@ -9,10 +9,16 @@ public class UserServices {
     private static final String usersPath = "backend/src/main/java/org/jophiel/storage/users";
 
     public static String getUser(String username) {
-        if (Files.exists(Paths.get(usersPath, username))) {
-            return "yup";
+        Path infoPath = Paths.get(usersPath, username, "info.json");
+        if (Files.exists(infoPath)) {
+            try {
+                return Files.readString(infoPath);
+            } catch (IOException e) {
+                e.printStackTrace();
+                return null;
+            }
         }
-        return "nope";
+        return null;
     }
     
     public static boolean validateUsername(String username) {
